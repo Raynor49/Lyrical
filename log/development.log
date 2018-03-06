@@ -1,0 +1,69 @@
+Started GET "/users/new" for 127.0.0.1 at 2018-03-06 13:45:10 -0500
+
+PG::ConnectionBad - FATAL:  database "geniusApp_development" does not exist
+:
+
+Started POST "/__better_errors/43fa0991e89d8afe/variables" for 127.0.0.1 at 2018-03-06 13:45:11 -0500
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:45:14 -0500
+
+PG::ConnectionBad - FATAL:  database "geniusApp_development" does not exist
+:
+
+Started POST "/__better_errors/3282a55a073a4304/variables" for 127.0.0.1 at 2018-03-06 13:45:14 -0500
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:45:59 -0500
+
+PG::ConnectionBad - FATAL:  database "geniusApp_development" does not exist
+:
+
+Started POST "/__better_errors/efc2d0cba3e92009/variables" for 127.0.0.1 at 2018-03-06 13:45:59 -0500
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:46:39 -0500
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/e18952e3256ce6b6/variables" for 127.0.0.1 at 2018-03-06 13:46:39 -0500
+  [1m[35m (320.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (47.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (35.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(548568610852849860)[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180306170755)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "session_token" character varying NOT NULL, "password_digest" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_username" ON "users"  ("username")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180306170755"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-03-06 18:49:10.890277"], ["updated_at", "2018-03-06 18:49:10.890277"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(548568610852849860)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:49:16 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/var/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (9.9ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:54:29 -0500
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+  namespace :api, :defaults: {format: :json} do
+                            ^
+/Users/appacademy/Desktop/Lyrical/config/routes.rb:3: syntax error, unexpected keyword_do_block, expecting keyword_end
+/Users/appacademy/Desktop/Lyrical/config/routes.rb:8: syntax error, unexpected keyword_end, expecting end-of-input:
+  config/routes.rb:3:in `'
+
+Started POST "/__better_errors/1701795be0362086/variables" for 127.0.0.1 at 2018-03-06 13:54:29 -0500
+Started GET "/" for 127.0.0.1 at 2018-03-06 13:54:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3229ms (Views: 3226.5ms | ActiveRecord: 0.0ms)
+
+
