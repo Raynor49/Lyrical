@@ -67,3 +67,110 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 3229ms (Views: 3226.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-06 14:32:05 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 504ms (Views: 490.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:33:43 -0500
+
+LoadError - Unable to autoload constant Api::UsersController, expected /Users/appacademy/Desktop/Lyrical/app/controllers/api/users_controller.rb to define it:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:41:37 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:42:10 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:42:32 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:43:05 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 5.6ms)
+
+
+
+NoMethodError - undefined method `after_initialization' for #<Class:0x007fe89d9c11b0>
+Did you mean?  after_initialize:
+  app/models/user.rb:8:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:44:43 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 14:46:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 357ms (Views: 329.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:46:29 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 4.4ms)
+
+
+
+NoMethodError - undefined method `after_initialization' for #<Class:0x007fe89bf42dc0>
+Did you mean?  after_initialize:
+  app/models/user.rb:8:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/api/users_controller.rb:3:in `create'
+
+Started GET "/" for 127.0.0.1 at 2018-03-06 14:52:24 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2018-03-06 14:52:27 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"TestUser", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (26.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "TestUser"], ["LIMIT", 1]]
+  [1m[35mSQL (19.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "TestUser"], ["session_token", "SWkD_djI8Y8iDL34yOz24w"], ["password_digest", "$2a$10$S17pptJjadQjf6xUWwVrFO887f9v6iM8AILxd2qLDlfIM5EU41EOa"], ["created_at", "2018-03-06 19:52:27.322524"], ["updated_at", "2018-03-06 19:52:27.322524"]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "TestUser"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (63.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vIFyoXH19-Ibb3vohKFCQg"], ["updated_at", "2018-03-06 19:52:27.368905"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (259.6ms)
+Completed 200 OK in 613ms (Views: 283.0ms | ActiveRecord: 140.3ms)
+
+
