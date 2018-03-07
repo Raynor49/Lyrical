@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+nav{
+  background-color: #ffff64;
+  text-align: right;
+  color: #ffff64;
+  text-shadow: 3px 3px black;
+  font-family: sans-serif;
+}
+
+.sesh-form{
+  margin-top: 10px;
+  border: 2px solid black;
+  width: 150px;
+  padding: 30px;
+  margin-left: 45%;
+  color: #ffff64;
+  background-color: black;
+  font-size: 20px;
+}
+
+
+.title{
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.sesh-links{
+  text-shadow: none;
+  position: relative;
+  padding-right: 5px;
+  bottom: 20px;
+  background-color: #ffff64;
+  border: none;
+  font-size: 20px;
+  border-bottom: 10px solid transparent;
+  font-family: sans-serif;
+}
+
+.sesh-links:hover{
+  border-bottom: 10px solid red;
+  cursor: pointer;
+}
+
+.lyrical{
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  margin-top: 10%;
+}
+
+.close-x {
+  text-align: right;
+  cursor: pointer;
+ }
