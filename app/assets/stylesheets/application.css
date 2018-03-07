@@ -52,6 +52,12 @@ nav{
   font-size: 20px;
 }
 
+
+.title{
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
 .sesh-links{
   text-shadow: none;
   position: relative;
