@@ -38,7 +38,6 @@ nav{
   background-color: #ffff64;
   text-align: right;
   color: #ffff64;
-  text-shadow: 3px 3px black;
   font-family: sans-serif;
 }
 
@@ -51,12 +50,6 @@ nav{
   color: #ffff64;
   background-color: black;
   font-size: 20px;
-}
-
-
-.title{
-  margin-bottom: 10px;
-  font-size: 30px;
 }
 
 .sesh-links{
@@ -78,8 +71,9 @@ nav{
 
 .lyrical{
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
   letter-spacing: 5px;
+  text-shadow: 4px 4px black;
 }
 
 .modal-background {
@@ -100,3 +94,12 @@ nav{
   text-align: right;
   cursor: pointer;
  }
+
+.user {
+  font-weight: 700;
+  text-shadow: none;
+  margin-bottom: 20px;
+  padding: none;
+  color: black;
+  font-size: 20px;
+}
