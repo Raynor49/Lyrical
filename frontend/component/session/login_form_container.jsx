@@ -6,7 +6,7 @@ import React from 'react';
 
 const mapStateToProps = (state) => {
   return({
-    errors: state.errors,
+    errors: state.errors.session,
     formType: 'Login'
   });
 };

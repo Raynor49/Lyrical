@@ -23,6 +23,18 @@ class SessionForm extends React.Component{
     });
   }
 
+  renderErrors() {
+  return(
+    <ul>
+      {this.props.errors.map((error) => (
+        <li>
+          {error}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
   render() {
     let title;
     let link;
@@ -33,16 +45,11 @@ class SessionForm extends React.Component{
       title = 'Log In';
     }
 
-    let errors;
-    if (this.props.errors.length){
-      errors = <h2>Errors: {this.props.errors}</h2>;
-    }
-
     return(
       <div className='sesh-form'>
         <div className='close-x' onClick={this.props.closeModal}>X</div>
         <h2 className='title'>{title}</h2>
-        {errors}
+        {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           <label>Username
             <input onChange={this.updateField('username')} type='text' value={this.state.username} />
