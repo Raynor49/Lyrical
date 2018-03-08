@@ -4956,3 +4956,12 @@ Processing by Api::TracksController#index as JSON
 Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/api/tracks/" for 127.0.0.1 at 2018-03-08 11:59:28 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (1.0ms)
+  Rendered api/tracks/index.json.jbuilder (16.7ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.4ms)
+
+

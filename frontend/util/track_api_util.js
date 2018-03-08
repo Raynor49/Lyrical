@@ -1,0 +1,36 @@
+export const fetchTracks = () => {
+  return($.ajax({
+    url: '/api/tracks',
+    method: 'GET'
+  }));
+};
+
+export const fetchTrack = (id) => {
+  return($.ajax({
+    url: `/api/tracks/${id}`,
+    method: 'GET'
+  }));
+};
+
+export const createTrack = (track) => {
+  return($.ajax({
+    url: '/api/tracks',
+    method: 'POST',
+    data: {track: track}
+  }));
+};
+
+export const updateTrack = (track) => {
+  return($.ajax({
+    url: `/api/tracks/${track.id}`,
+    method: 'PATCH',
+    data: {track: track}
+  }));
+};
+
+export const deleteTrack = (id) => {
+  return($.ajax({
+    url: `/api/tracks/${id}`,
+    method: 'DELETE'
+  }));
+};
