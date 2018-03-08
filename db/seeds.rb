@@ -16,7 +16,16 @@ Track.create!({
   title: 'lilAnthem',
   artist: 'lilB',
   album: 'lilbalbum',
-  genre: 'lilgen',
+  genre: 'rap',
   lyrics: 'here are my lyrics yo',
+  user_id: user.id
+  })
+
+Track.create!({
+  title: 'AsecondSong',
+  artist: 'bobbyG',
+  album: 'genisu',
+  genre: 'hiphop',
+  lyrics: 'SING SONG SIGN SONG',
   user_id: user.id
   })

@@ -4965,3 +4965,199 @@ Processing by Api::TracksController#index as JSON
 Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:36:07 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "a0dgQsm3tiVh6SjilrUgbQ"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "a0dgQsm3tiVh6SjilrUgbQ"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (1.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 253ms (Views: 247.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-03-08 12:36:12 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "a0dgQsm3tiVh6SjilrUgbQ"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "a0dgQsm3tiVh6SjilrUgbQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "SeededUser"], ["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "i-i_B2SVGYoFxb6RiqCGkg"], ["updated_at", "2018-03-08 17:36:12.821907"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (2.3ms)
+Completed 200 OK in 86ms (Views: 68.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:47:32 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 84ms (Views: 73.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:49:44 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 908ms (Views: 896.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-08 12:50:24 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (2.8ms)
+  Rendered api/tracks/index.json.jbuilder (21.0ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "SeededUser"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "SeededUser"], ["session_token", "G_nHhCdehSuUCGfC4XODyw"], ["password_digest", "$2a$10$d02zazqkNJiv7kieDu6lneqNdnf1KUoAEC38Q1TQQl5EaksaymzIm"], ["created_at", "2018-03-08 17:52:48.532107"], ["updated_at", "2018-03-08 17:52:48.532107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "artist", "album", "genre", "lyrics", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "lilAnthem"], ["artist", "lilB"], ["album", "lilbalbum"], ["genre", "rap"], ["lyrics", "here are my lyrics yo"], ["user_id", 3], ["created_at", "2018-03-08 17:52:48.595580"], ["updated_at", "2018-03-08 17:52:48.595580"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "artist", "album", "genre", "lyrics", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "AsecondSong"], ["artist", "bobbyG"], ["album", "genisu"], ["genre", "hiphop"], ["lyrics", "SING SONG SIGN SONG"], ["user_id", 3], ["created_at", "2018-03-08 17:52:48.600726"], ["updated_at", "2018-03-08 17:52:48.600726"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:52:52 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 139ms (Views: 124.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:52:54 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-08 12:52:56 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (1.0ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/index.json.jbuilder (20.5ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-08 12:54:53 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 496ms (Views: 491.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-08 12:55:10 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.8ms)
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  Rendered api/tracks/index.json.jbuilder (7.0ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/tracks/2" for 127.0.0.1 at 2018-03-08 12:55:24 -0500
+Processing by Api::TracksController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-03-08 12:55:45 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"SeededUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "SeededUser"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "SeededUser"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "50VNhb-DkT99jLfy02ynaQ"], ["updated_at", "2018-03-08 17:55:45.356389"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (3.2ms)
+Completed 200 OK in 153ms (Views: 65.6ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/api/tracks/2" for 127.0.0.1 at 2018-03-08 12:55:49 -0500
+Processing by Api::TracksController#destroy as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "50VNhb-DkT99jLfy02ynaQ"], ["LIMIT", 1]]
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "50VNhb-DkT99jLfy02ynaQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/tracks/index.json.jbuilder
+  Rendered api/tracks/index.json.jbuilder (14.2ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.4ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/api/tracks/index.json.jbuilder:2:in `block in _app_views_api_tracks_index_json_jbuilder___4339675017783739633_70292716692380'
+  app/views/api/tracks/index.json.jbuilder:1:in `_app_views_api_tracks_index_json_jbuilder___4339675017783739633_70292716692380'
+  app/controllers/api/tracks_controller.rb:29:in `destroy'
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-08 12:56:02 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.8ms)
+  Rendered api/tracks/index.json.jbuilder (5.4ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2018-03-08 12:56:48 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "50VNhb-DkT99jLfy02ynaQ"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "50VNhb-DkT99jLfy02ynaQ"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "SeededUser"], ["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1kHCrVUGoGqirJXA7n33jg"], ["updated_at", "2018-03-08 17:56:48.890868"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 44ms (Views: 36.1ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/api/tracks/3" for 127.0.0.1 at 2018-03-08 12:56:55 -0500
+Processing by Api::TracksController#destroy as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-08 12:57:03 -0500
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (1.0ms)
+  Rendered api/tracks/index.json.jbuilder (17.7ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.6ms)
+
+
