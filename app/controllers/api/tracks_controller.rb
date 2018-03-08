@@ -1,5 +1,5 @@
 class Api::TracksController < ApplicationController
-  before_action :require_logged_in, except: [:show]
+  before_action :require_logged_in, except: [:show, :index]
 
   def create
     @track = current_user.tracks.new(track_params)
@@ -35,10 +35,10 @@ class Api::TracksController < ApplicationController
   def update
     @track = Track.find(params[:id])
 
-    if @track.update(track_params)
+    if @track.user_id === current_user.id && @track.update(track_params)
       render :show
     else
-      render json: @track.errors.full_messages
+      render json: @track.errors.full_messages, status: 422
     end
   end
 

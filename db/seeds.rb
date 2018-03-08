@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+user = User.create!({
+  username: 'SeededUser',
+  password: 'seededpass'
+  })
+
+Track.destroy_all
+Track.create!({
+  title: 'lilAnthem',
+  artist: 'lilB',
+  album: 'lilbalbum',
+  genre: 'lilgen',
+  lyrics: 'here are my lyrics yo',
+  user_id: user.id
+  })
