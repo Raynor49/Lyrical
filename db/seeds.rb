@@ -16,7 +16,7 @@ Track.create!({
   title: 'lilAnthem',
   artist: 'lilB',
   album: 'lilbalbum',
-  genre: 'rap',
+  genre: 'Rap',
   lyrics: 'here are my lyrics yo',
   user_id: user.id
   })
@@ -25,7 +25,25 @@ Track.create!({
   title: 'AsecondSong',
   artist: 'bobbyG',
   album: 'genisu',
-  genre: 'hiphop',
+  genre: 'Hiphop',
   lyrics: 'SING SONG SIGN SONG',
+  user_id: user.id
+  })
+
+Track.create!({
+  title: 'Yonkers',
+  artist: 'Tyler',
+  album: 'Goblin',
+  genre: 'Rap',
+  lyrics: 'lkasd jdlsakfjkds jfdks jfjdk fksalisejs a sjdkaj flsd aljiejsljskd  fjdksa ids.',
+  user_id: user.id
+  })
+
+Track.create!({
+  title: 'Grand Theft Ecstacy',
+  artist: 'Feed Me',
+  album: 'Grand Adventure',
+  genre: 'Electro',
+  lyrics: 'lkasd jdlsakfjkds jfdks jfjdk fksalisejs a sjdkaj flsd aljiejsljskd  fjdksa ids.',
   user_id: user.id
   })

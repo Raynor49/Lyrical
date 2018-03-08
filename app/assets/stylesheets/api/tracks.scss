@@ -1,3 +1,35 @@
 // Place all the styles related to the Api::Tracks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.tracklist{
+  margin: auto;
+  width: 60%;
+  border-top: 4px solid black
+}
+
+.track-item{
+  display: flex;
+  margin: 10px;
+  margin-left: 20%;
+  font-family: sans-serif;
+  border-bottom: 1px solid lightgrey;
+  width: 60%;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.track-idx-num{
+  border: 2px solid black;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.track-idx-artist{
+  font-size: 15px;
+}
+
+.track-idx-title{
+  font-size: 25px;
+}

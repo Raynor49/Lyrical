@@ -5,6 +5,7 @@ export const RECEIVE_TRACK = 'RECEIVE_TRACK';
 export const REMOVE_TRACK = 'REMOVE_TRACK';
 
 export const receiveAllTracks = (tracks) => {
+
   return({
     type: RECEIVE_ALL_TRACKS,
     tracks
@@ -12,8 +13,9 @@ export const receiveAllTracks = (tracks) => {
 };
 
 export const requestAllTracks = () => dispatch => {
+
   return(APIUtil.fetchTracks().then(
-    tracks =>  dispatch(receiveAllTracks(tracks))
+    tracks => dispatch(receiveAllTracks(tracks))
   ));
 };
 //-----------------------------------------------------------------
@@ -37,11 +39,17 @@ export const createTrack = track => dispatch => {
   ));
 };
 
+// ,
+// error => dispatch(receiveErrors(error.responseJSON))
+
 export const updateTrack = track => dispatch => {
   return(APIUtil.updateTrack(track.id).then(
     track => dispatch(receiveTrack(track))
   ));
 };
+// ,
+// error => dispatch(receiveErrors(error.responseJSON))
+
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 export const removeTrack = (id) => {

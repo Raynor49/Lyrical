@@ -6,10 +6,11 @@ import {
 } from '../actions/track_actions.js';
 
 const tracksReducer = (state={}, action) => {
+
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_ALL_TRACKS:
-      return merge( {}, state, action.tracks );
+      return action.tracks;
     case RECEIVE_TRACK:
       return merge( {}, state, { [action.track.id]: action.track });
     case REMOVE_TRACK:
