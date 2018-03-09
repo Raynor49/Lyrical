@@ -77,9 +77,88 @@
 }
 
 .lyrics{
+  padding-left: 25px;
   border-left: 1px solid grey;
   font-family: sans-serif;
   width: 30%;
   margin-left: 17%;
   margin-bottom: 50px;
+}
+
+//-----------------------------------------
+.track-form{
+  padding-left: 14%;
+  padding-top: 40px;
+  height: 1000px;
+  padding-right: 20%;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+.track-form-header{
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.track-form-primary{
+  font-size: 18px;
+  border-bottom: 1px solid grey;
+}
+
+.track-form-inputs{
+  color: grey;
+  font-weight: 100;
+  margin-top: 10px;
+  margin-left: 20px;
+  list-style-type: none;
+
+}
+
+.form-artist{
+  border-radius: 5px;
+  width: 400px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+.form-title{
+  border-radius: 5px;
+  width: 400px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+.form-lyrics{
+  border-radius: 5px;
+  width: 400px;
+  height: 500px;
+  margin-bottom: 20px;
+}
+.form-album{
+  border-radius: 5px;
+  width: 400px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+
+.form-submit-button{
+  color: white;
+  font-size: 15px;
+  border-radius: 2px;
+  background-color: #262626;
+  width: auto;
+  font-weight: 300;
+}
+
+.genres{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.genres > label{
+  margin-right: 25px;
+}
+
+.form-submit-button:hover{
+  cursor: pointer;
+  background-color: grey;
 }

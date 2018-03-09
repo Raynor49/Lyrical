@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class TrackShow extends React.Component{
 
@@ -10,13 +10,19 @@ class TrackShow extends React.Component{
   }
 
   render(){
-    // debugger
+
     let trackToShow;
     if (this.props.track === undefined){
       trackToShow = {title:''};
     }else{
       trackToShow = this.props.track;
     }
+
+    let editLink = '';
+    if ((this.props.currentUser !== undefined && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
+      editLink = 'Edit Song';
+    }
+
     return(
       <div>
         <ul className="track-header">
@@ -27,6 +33,7 @@ class TrackShow extends React.Component{
         </ul>
 
         <pre className='lyrics'>{trackToShow.lyrics}</pre>
+        <input type='submit' value={editLink}/>
       </div>
     );
   }
