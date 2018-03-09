@@ -61,10 +61,10 @@ nav{
 .sesh-links{
   text-shadow: none;
   position: relative;
-  padding-right: 5px;
   bottom: 20px;
-  background-color: #ffff64;
-  border: none;
+  background-color: black;
+  color: #ffff64;
+  border: 2px solid #ffff64;
   font-size: 20px;
   border-bottom: 10px solid transparent;
   font-family: sans-serif;
@@ -104,10 +104,28 @@ nav{
  }
 
 .user {
-  font-weight: 700;
+  font-weight: 500;
   text-shadow: none;
   margin-bottom: 20px;
   padding: none;
-  color: black;
+  color: #ffff64;
   font-size: 20px;
+}
+
+.subheader{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-song-link{
+  color: white;
+  text-decoration: none;
+  margin-right: 39px;
+  font-weight: 300;
+  margin-top: 13px;
+}
+
+.new-song-link:hover{
+  color: #ffff64;
 }

@@ -29,28 +29,41 @@ class TrackForm extends React.Component{
     );
   }
 
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, idx) => (
+          <li key={idx}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
   render(){
     return(
       <form className='track-form' onSubmit={this.handleSubmit}>
+        {this.renderErrors()}
         <h1 className='track-form-header'>Add Song</h1>
         <h2 className='track-form-primary'>Primary Info</h2>
         <ul className='track-form-inputs'>
           <li>
             <label >Artist
-              <li><input className='form-artist' onChange={this.updateField('artist')} type='text' value={this.state.artist}/></li>
+              <div><input className='form-artist' onChange={this.updateField('artist')} type='text' value={this.state.artist}/></div>
             </label>
           </li>
 
           <li>
             <label >Title
-              <li><input  className='form-title' onChange={this.updateField('title')} type='text' value={this.state.title}/></li>
+              <div><input  className='form-title' onChange={this.updateField('title')} type='text' value={this.state.title}/></div>
             </label>
           </li>
 
           <li>
             <label className='form-genre-lable' >Genre
-              <li className='genres'>
+              <div className='genres'>
                 <label>Rap
                   <input name='track' onChange={this.updateField('genre')} type='radio' value="Rap"/>
                 </label>
@@ -66,19 +79,19 @@ class TrackForm extends React.Component{
                 <label>R&B
                   <input name='track' onChange={this.updateField('genre')} type='radio' value="R&B"/>
                 </label>
-              </li>
+              </div>
             </label>
           </li>
 
           <li>
             <label >Lyrics
-              <li><textarea className='form-lyrics' onChange={this.updateField('lyrics')} value={this.state.lyrics}/></li>
+              <div><textarea className='form-lyrics' onChange={this.updateField('lyrics')} value={this.state.lyrics}/></div>
             </label>
           </li>
 
           <li>
             <label >Album
-              <li><input className='form-album' onChange={this.updateField('album')} type='text' value={this.state.album}/></li>
+              <div><input className='form-album' onChange={this.updateField('album')} type='text' value={this.state.album}/></div>
             </label>
           </li>
 

@@ -7,7 +7,7 @@ class Api::TracksController < ApplicationController
     if @track.save
       render :show
     else
-      render json: ['Input fields cannot be blank'], status: 422
+      render json: @track.errors.full_messages, status: 422
     end
   end
 

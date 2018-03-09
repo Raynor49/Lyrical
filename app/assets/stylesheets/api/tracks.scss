@@ -4,18 +4,25 @@
 .tracklist{
   margin: auto;
   width: 60%;
-  border-top: 4px solid black
+  height: 900px;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  background-color: #f0ead6;
 }
 
 .track-item{
   display: flex;
-  margin: 10px;
   margin-left: 20%;
   font-family: sans-serif;
   border-bottom: 1px solid lightgrey;
   width: 60%;
   justify-content: space-between;
   font-weight: 700;
+}
+
+.track-item:hover{
+  cursor: pointer;
+  background-color: #ffff64;
 }
 
 .track-idx-num{

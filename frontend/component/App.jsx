@@ -8,6 +8,7 @@ import HeaderContainer from './header/header_container';
 import TrackIndexContainer from './tracks/tracks_index/track_index_container.jsx';
 import TrackShowContainer from './tracks/tracks_show/tracks_show_container.jsx';
 import TrackFormContainer from './tracks/tracks_form/tracks_form_container.jsx';
+import {ProtectedRoute} from '../util/route_util.jsx';
 
 const App = () => (
   <div>
@@ -15,7 +16,7 @@ const App = () => (
     <HeaderContainer />
     <Switch>
       <Route exact path='/' component={TrackIndexContainer} />
-      <Route exact path='/tracks/new' component={TrackFormContainer} />
+      <ProtectedRoute exact path="/tracks/new" component={TrackFormContainer} />
       <Route exact path='/tracks/:trackId' component={TrackShowContainer} />
     </Switch>
   </div>

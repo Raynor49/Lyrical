@@ -17,9 +17,9 @@ class TrackShow extends React.Component{
     }else{
       trackToShow = this.props.track;
     }
-
+    
     let editLink = '';
-    if ((this.props.currentUser !== undefined && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
+    if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = 'Edit Song';
     }
 

@@ -28,16 +28,16 @@ class SessionForm extends React.Component{
   }
 
   renderErrors() {
-  return(
-    <ul>
-      {this.props.errors.map((error, idx) => (
-        <li key={idx}>
-          {error}
-        </li>
-      ))}
-    </ul>
-  );
-}
+    return(
+      <ul>
+        {this.props.errors.map((error, idx) => (
+          <li key={idx}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render() {
     let title;

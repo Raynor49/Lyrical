@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
   });
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, {history}) => {
   return({
     logout: () => dispatch(logout()),
     openModal: (modal) => dispatch(openModal(modal))
