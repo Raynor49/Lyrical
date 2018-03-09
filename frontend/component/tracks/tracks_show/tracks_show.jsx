@@ -19,14 +19,14 @@ class TrackShow extends React.Component{
     }
     return(
       <div>
-        <h2 className="track-header">
-          {trackToShow.title}
-          {trackToShow.artist}
-          {trackToShow.album}
-          {trackToShow.genre}
-        </h2>
+        <ul className="track-header">
+          <li className="track-title">{trackToShow.title}</li>
+          <li className="track-artist">{trackToShow.artist}</li>
+          <li className="track-album"><div className='album-word'>Album</div> {trackToShow.album}</li>
+          <li className="track-genre"><div className='genre-word'>Genre</div>  {trackToShow.genre}</li>
+        </ul>
 
-        <p className='lyrics'>{trackToShow.lyrics}</p>
+        <pre className='lyrics'>{trackToShow.lyrics}</pre>
       </div>
     );
   }

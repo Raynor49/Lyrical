@@ -76,7 +76,9 @@ nav{
 }
 
 .lyrical{
-  text-align: center;
+  text-decoration: none;
+  color: #ffff64;
+  margin-right: 45%;
   font-size: 40px;
   letter-spacing: 5px;
   text-shadow: 4px 4px black;
