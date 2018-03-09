@@ -7,7 +7,7 @@ class Api::TracksController < ApplicationController
     if @track.save
       render :show
     else
-      render json: @track.errors.full_messages, status: 422
+      render json: ['Input fields cannot be blank'], status: 422
     end
   end
 
@@ -28,7 +28,7 @@ class Api::TracksController < ApplicationController
       @track.destroy
       render :index
     else
-      render json: ["Destroy your own tracks, jabroni"], status: 403
+      render json: ["Cannot destroy other user's tracks."], status: 403
     end
   end
 

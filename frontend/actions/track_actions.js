@@ -3,6 +3,7 @@ import * as APIUtil from '../util/track_api_util.js';
 export const RECEIVE_ALL_TRACKS = 'RECEIVE_ALL_TRACKS';
 export const RECEIVE_TRACK = 'RECEIVE_TRACK';
 export const REMOVE_TRACK = 'REMOVE_TRACK';
+export const RECEIVE_TRACK_ERRORS = 'RECEIVE_TRACK_ERRORS';
 
 export const receiveAllTracks = (tracks) => {
 
@@ -27,6 +28,13 @@ export const receiveTrack = (track) => {
   });
 };
 
+export const receiveErrors = errors => {
+  return({
+    type: RECEIVE_TRACK_ERRORS,
+    errors
+  });
+};
+
 export const requestTrack = (id) => dispatch => {
   return(APIUtil.fetchTrack(id).then(
     track => dispatch(receiveTrack(track))
@@ -36,19 +44,15 @@ export const requestTrack = (id) => dispatch => {
 export const createTrack = track => dispatch => {
   return(APIUtil.createTrack(track).then(
     track => dispatch(receiveTrack(track))
-  ));
+  )).fail(err => dispatch(receiveErrors(err.responseJSON)));
 };
-
-// ,
-// error => dispatch(receiveErrors(error.responseJSON))
 
 export const updateTrack = track => dispatch => {
   return(APIUtil.updateTrack(track.id).then(
     track => dispatch(receiveTrack(track))
-  ));
+  )).fail(err => dispatch(receiveErrors(err.responseJSON)));
 };
-// ,
-// error => dispatch(receiveErrors(error.responseJSON))
+
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
