@@ -12,7 +12,7 @@ class TrackIndex extends React.Component{
     // debugger
     const tracks = this.props.tracks.map( (track, idx) => {
       return(
-        <TrackIndexItem key={track.id} track={track} idx={idx}/>
+        <TrackIndexItem key={track.id} track={track} idx={idx} id={track.id}/>
       );
     });
     return(
