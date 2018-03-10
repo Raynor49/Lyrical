@@ -12,8 +12,31 @@ const Protected = ({ component: Component, path, loggedIn, exact }) => (
   )} />
 );
 
-const mapStateToProps = state => (
-  {loggedIn: Boolean(state.session.currentUser)}
+const Auth = ({ component: Component, path, loggedIn, correctUser, exact }) => (
+  <Route path={path} exact={exact} render={(props) => (
+     (loggedIn && correctUser) ? (
+      <Component {...props} />
+    ) : (
+      <Redirect to="/" />
+    )
+  )} />
 );
 
+const mapStateToProps = (state, ownProps) => {
+  const loggedIn = Boolean(state.session.currentUser);
+  let correctUser;
+  if(loggedIn && state.entities.tracks[parseInt(ownProps.computedMatch.params.trackId)]){
+    correctUser = Boolean(state.session.currentUser.id === state.entities.tracks[parseInt(ownProps.computedMatch.params.trackId)].user_id);
+  }else{
+    correctUser = false;
+  }
+  return(
+    {
+      loggedIn: loggedIn,
+      correctUser: correctUser
+    }
+  );
+};
+
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
+export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));

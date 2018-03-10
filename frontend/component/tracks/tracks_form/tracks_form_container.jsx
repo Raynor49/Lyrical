@@ -4,13 +4,15 @@ import { createTrack } from '../../../actions/track_actions';
 
 const mapStateToProps = (state) => {
   return({
-    errors: state.errors.tracks
+    track: { title: '', lyrics: '', artist: '', album: '', genre: '' },
+    errors: state.errors.tracks,
+    formType: 'Add a Song'
   });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return({
-    createTrack: (track) => dispatch(createTrack(track))
+    action: (track) => dispatch(createTrack(track))
   });
 };
 

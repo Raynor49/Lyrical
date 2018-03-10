@@ -5,13 +5,7 @@ class TrackForm extends React.Component{
   constructor(props){
     super(props);
 
-    this.state = {
-      title: '',
-      genre: '',
-      artist: '',
-      album: '',
-      lyrics: ''
-    };
+    this.state = this.props.track;
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -24,7 +18,7 @@ class TrackForm extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.createTrack(this.state).then(
+    this.props.action(this.state).then(
       data => this.props.history.push(`/tracks/${data.track.id}`)
     );
   }
@@ -46,7 +40,7 @@ class TrackForm extends React.Component{
     return(
       <form className='track-form' onSubmit={this.handleSubmit}>
         {this.renderErrors()}
-        <h1 className='track-form-header'>Add Song</h1>
+        <h1 className='track-form-header'>{this.props.formType}</h1>
         <h2 className='track-form-primary'>Primary Info</h2>
         <ul className='track-form-inputs'>
           <li>
