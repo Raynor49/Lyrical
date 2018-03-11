@@ -2,11 +2,23 @@ import React from 'react';
 import { withRouter, Link, Redirect } from 'react-router-dom';
 
 class TrackShow extends React.Component{
+  constructor(props){
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
   componentDidMount(){
     //
     this.props.requestAllTracks();
     this.props.requestTrack(this.props.id);
+  }
+
+  handleClick(e){
+
+    e.preventDefault();
+    this.props.deleteTrack(this.props.id).then(
+      () => this.props.history.push('/')
+    );
   }
 
   render(){
@@ -21,7 +33,7 @@ class TrackShow extends React.Component{
     let deleteButton = '';
     if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = <Link className='track-edit-link' to={`/tracks/${this.props.id}/edit`}>Edit Track</Link>;
-      deleteButton = <button className='delete-track' onClick={() => this.props.deleteTrack(this.props.id).then(() => this.props.history.push('/'))}>Delete Track</button>;
+      deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
     }
 
     return(

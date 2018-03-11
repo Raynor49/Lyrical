@@ -26,7 +26,7 @@ class Api::TracksController < ApplicationController
 
     if @track && @track.user_id === current_user.id
       @track.destroy
-      render :index
+      render json: {}
     else
       render json: ["Cannot destroy other user's tracks."], status: 403
     end
