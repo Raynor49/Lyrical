@@ -129,3 +129,11 @@ nav{
 .new-song-link:hover{
   color: #ffff64;
 }
+
+.cover-image{
+  height: 400px;
+  background-repeat: no-repeat;
+  background: url("https://wallpaperbrowse.com/media/images/Music-Wallpaper-HD-1080p-42.jpg");
+  justify-content: center;
+  background-position-y: -400px;
+}

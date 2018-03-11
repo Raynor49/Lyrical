@@ -12,10 +12,9 @@
 
 .track-item{
   display: flex;
-  margin-left: 20%;
   font-family: sans-serif;
   border-bottom: 1px solid lightgrey;
-  width: 60%;
+  width: 100%;
   justify-content: space-between;
   font-weight: 700;
 }
@@ -47,9 +46,19 @@
 
 .track-header{
   font-weight: bold;
-  height: 200px;
+  height: 210px;
   background-color: black;
   font-family: sans-serif;
+}
+
+.track-edit-link{
+  text-decoration: none;
+  color: white;
+}
+
+.track-edit-link:hover{
+  color: #ffff64;
+  border-bottom: 1px solid #ffff64;
 }
 
 .track-artist{
@@ -168,4 +177,31 @@
 .form-submit-button:hover{
   cursor: pointer;
   background-color: grey;
+}
+
+.top-songs{
+  border-bottom: 2px solid black;
+  padding-left: 45%;
+  font-size: 35px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+}
+
+.edit-delete-links{
+  color: white;
+}
+
+.delete-track{
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.delete-track:hover{
+  color: #ffff64;
+  cursor: pointer;
+  border-bottom: 1px solid #ffff64;
 }

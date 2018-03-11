@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import TracksShow from './tracks_show.jsx';
-import { requestTrack, requestAllTracks } from '../../../actions/track_actions';
+import { requestTrack, requestAllTracks, deleteTrack } from '../../../actions/track_actions';
 
 const mapStateToProps = (state, ownParams) => {
   return({
@@ -14,7 +14,8 @@ const mapDispatchToProps = (dispatch) => {
   // debugger
   return({
     requestTrack: (id) => dispatch(requestTrack(id)),
-    requestAllTracks: () => dispatch(requestAllTracks())
+    requestAllTracks: () => dispatch(requestAllTracks()),
+    deleteTrack: (id) => dispatch(deleteTrack(id))
   });
 };
 
