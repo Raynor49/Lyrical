@@ -28337,3 +28337,71 @@ Processing by Api::TracksController#index as JSON
 Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-10 20:22:32 -0500
+Processing by Api::TracksController#index as JSON
+Started GET "/api/tracks/14" for 127.0.0.1 at 2018-03-10 20:22:32 -0500
+  Rendering api/tracks/index.json.jbuilder
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering api/tracks/show.json.jbuilder
+  [1m[36mTrack Load (7.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  Rendered api/tracks/show.json.jbuilder (4.2ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/index.json.jbuilder (17.1ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2018-03-10 20:22:40 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"SeededUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "SeededUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "SeededUser"], ["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "DR7hHLs52QFRonMOeXQpJg"], ["updated_at", "2018-03-11 01:22:40.284196"], ["id", 4]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 74ms (Views: 6.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-10 20:22:43 -0500
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DR7hHLs52QFRonMOeXQpJg"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DR7hHLs52QFRonMOeXQpJg"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-10 20:22:43 -0500
+Processing by Api::TracksController#index as JSON
+Started GET "/api/tracks/14" for 127.0.0.1 at 2018-03-10 20:22:43 -0500
+  Rendering api/tracks/index.json.jbuilder
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"14"}
+  [1m[36mTrack Load (0.8ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/show.json.jbuilder (1.4ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+  Rendered api/tracks/index.json.jbuilder (10.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.8ms)
+
+
