@@ -5,4 +5,9 @@ class Track < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id,
     class_name: :User
+
+  has_many :annotations,
+    primary_key: :id,
+    foreign_key: :track_id,
+    class_name: :Annotation
 end

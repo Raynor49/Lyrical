@@ -8,6 +8,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Track
 
+  has_many :annotations,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Annotation
+
   attr_reader :password
 
   after_initialize :ensure_session_token

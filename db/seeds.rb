@@ -12,7 +12,7 @@ user = User.create!({
   })
 
 Track.destroy_all
-Track.create!({
+blueTrack = Track.create!({
   title: 'Blue (Da Ba Dee)',
   artist: 'Eiffel65',
   album: 'Europop',
@@ -315,7 +315,7 @@ Dead",
   user_id: user.id
   })
 
-Track.create!({
+countryTrack = Track.create!({
   title: 'Country Song',
   artist: 'Bo Burnham',
   album: 'Make Happy',
@@ -401,3 +401,9 @@ And I'll be upfront
 I do what I do 'cause I'm a total fuckin' cunt-ry boy",
   user_id: user.id
   })
+
+
+Annotation.destroy_all
+Annotation.create!({body:"Hes about to tell a story and wants you to listen.", start_index:0, end_index:28, user_id:user.id, track_id:blueTrack.id})
+Annotation.create!({body:"Dirt road is a common country trope.", start_index:9, end_index:19, user_id:user.id, track_id:countryTrack.id})
+Annotation.create!({body:"A beer is also a common trope.", start_index:20, end_index:30, user_id:user.id, track_id:countryTrack.id})
