@@ -17,6 +17,7 @@ class TrackForm extends React.Component{
   }
 
   handleSubmit(e){
+
     e.preventDefault();
     this.props.action(this.state).then(
       data => this.props.history.push(`/tracks/${data.track.id}`)
@@ -37,6 +38,7 @@ class TrackForm extends React.Component{
 
 
   render(){
+
     return(
       <form className='track-form' onSubmit={this.handleSubmit}>
         {this.renderErrors()}

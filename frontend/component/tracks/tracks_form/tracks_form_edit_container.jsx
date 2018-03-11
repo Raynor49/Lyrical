@@ -26,8 +26,9 @@ class EditTrackForm extends React.Component{
   componentDidMount() {
     this.props.requestTrack(this.props.match.params.trackId);
   }
-
+  
   render() {
+
     return(
       <TrackForm
         action={this.props.action}

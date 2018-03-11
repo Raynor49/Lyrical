@@ -48,7 +48,8 @@ export const createTrack = track => dispatch => {
 };
 
 export const updateTrack = track => dispatch => {
-  return(APIUtil.updateTrack(track.id).then(
+
+  return(APIUtil.updateTrack(track).then(
     track => dispatch(receiveTrack(track))
   )).fail(err => dispatch(receiveErrors(err.responseJSON)));
 };
