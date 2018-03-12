@@ -10,6 +10,14 @@
   background-color: #f0ead6;
 }
 
+.track-show-page{
+  background-color: lightgrey;
+}
+
+.lyrics-annotation{
+  display: flex;
+}
+
 .track-item{
   display: flex;
   font-family: sans-serif;
@@ -96,9 +104,10 @@
   padding-left: 25px;
   border-left: 1px solid grey;
   font-family: sans-serif;
-  width: 30%;
+  width: 60%;
   margin-left: 17%;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+  background-color: white;
 }
 
 //-----------------------------------------

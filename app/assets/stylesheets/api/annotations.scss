@@ -1,3 +1,32 @@
 // Place all the styles related to the Api::Annotations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.annotation{
+  position: sticky;
+  // top: 50%;
+  // left: 60%;
+  // margin-left: -100px; /* Width of image /2 */
+  // margin-top: -190px; /* Height of image /2 */
+  background-color: white;
+  border-left: 5px solid #99a7ee;
+  padding: 50px;
+  // padding-top: 10px;
+  top: 40px;
+}
+
+.annotation-author{
+  font-weight: bold;
+  font-size: 28px;
+  padding-bottom: 50px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.annotation-box{
+  background-color: white;
+  max-width: 700px;
+  margin-right: 400px;
+}

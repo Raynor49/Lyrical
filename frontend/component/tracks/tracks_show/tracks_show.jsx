@@ -45,7 +45,7 @@ class TrackShow extends React.Component{
     }
     //need to map here and render some as normal text and render some as link components
     return(
-      <div>
+      <div className='track-show-page'>
         <ul className="track-header">
           <li className="track-title">{trackToShow.title}</li>
           <li className="track-artist">{trackToShow.artist}</li>
@@ -54,9 +54,13 @@ class TrackShow extends React.Component{
           <li className='edit-delete-links' >{editLink} {deleteButton}</li>
         </ul>
 
+        <div className='lyrics-annotation'>
+          <pre className='lyrics'>{trackToShow.lyrics}</pre>
+          <div className='annotation-box'>
+            {annotation}
+          </div>
+        </div>
 
-        <pre className='lyrics'>{trackToShow.lyrics}</pre>
-        {annotation}
       </div>
     );
   }
