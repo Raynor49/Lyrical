@@ -10,6 +10,10 @@ user = User.create!({
   username: 'SeededUser',
   password: 'seededpass'
   })
+user2 = User.create!({
+  username: 'RapGod',
+  password: 'eminem'
+  })
 
 Track.destroy_all
 blueTrack = Track.create!({
@@ -225,7 +229,7 @@ Please stand up, please stand up?
 [Outro]
 Ha ha, I guess there’s a Slim Shady in all of us
 Fuck it, let’s all stand up!",
-  user_id: user.id
+  user_id: user2.id
   })
 
 Track.create!({
@@ -315,99 +319,47 @@ Dead",
   user_id: user.id
   })
 
-countryTrack = Track.create!({
-  title: 'Country Song',
-  artist: 'Bo Burnham',
-  album: 'Make Happy',
-  genre: 'Country',
+knowTrack = Track.create!({
+  title: 'What You Know',
+  artist: 'Two Door Cinema Club',
+  album: 'Tourist History',
+  genre: 'Pop',
   lyrics:"[Verse 1]
-A dirt road
-A cold beer
-A blue jeans
-A red pickup
-A rural noun, simple adjective
-
-No shoes
-No shirt
-No Jews
-You didn't hear that
-Sort of a mental typo
-
-[Pre-Chorus]
-I walk and talk like a field hand
-But the boots I'm wearing cost three grand
-I write songs about riding tractors
-From the comfort of a private jet
+In a few weeks, I will get time to realise
+It's right before my eyes
+And I can take it if it's what I want to do
+I am leaving and this is starting to feel like
+It's right before my eyes
+And I can taste it, it's my sweet beginning
 
 [Chorus]
-I can sing in Mandarin
-And still know I'm pandering
-Hunting deer and chasing trout
-A Bud Light with the logo facing out
-
-Hear that subtle mandolin
-That's textbook panderin'
-I own a private ranch that I rarely use
-I don't like dirt
-
-[Spoken]
-One verse, one chorus in the bag
-Now it's time to talk to the ladies
-I'm hoping my Southern charm offsets all these rape-y vibes I'm puttin' out
+And I can tell just what you want
+You don't want to be alone
+You don't want to be alone
+And I can't say it's what you know
+But you've known it the whole time
+Yeah, you've known it the whole time
 
 [Verse 2]
-Good girl
-In a straw hat
-With her arms out in a corn field
-That is a scarecrow
-Thought that was a human woman, sorry
-
-A cold night
-A cold beer
-A cold jeans
-Strike that last one
-
-I'm wanting you
-I hope you're feeling me
-Subtextually
-
-[Pre-Chorus]
-We go to bed, you doze off
-So I take your country girl clothes off
-I put my hands on your body
-It feels like hay, it's a fucking scarecrow again
+Maybe next year, I'll have no time
+To think about the questions to address
+Am I the one to try to stop the fire?
+I wouldn't test you, I'm not the best you could have obtained
+Why try anything? I will get there
+Just remember, I know
 
 [Chorus]
-Like Mike’s Evander-ing
-Fuck your ears, I'm pandering
-I write songs for the people who do
-Jobs in the towns that I'd never move to
-
-Legalize gerrymandering
-Tolerate my pandering
-You got a beautiful mouth
-I got a beautiful (dick)
-
-Y'all dumb motherfuckers want a key change?
-
-Thematically meandering
-Emphatically pandering
-I got a tight grip on my demo's balls
-Say the word \"truck,\" they jizz in their overalls
-
-You don't know what land you're in
-I'm in the land of pandering
-And I'll be upfront
-I do what I do 'cause I'm a total fuckin' cunt-ry boy",
+And I can tell just what you want
+You don't want to be alone
+You don't want to be alone
+And I can't say it's what you know
+But you've known it the whole time
+Yeah, you've known it the whole time",
   user_id: user.id
   })
 
 
 Annotation.destroy_all
 Annotation.create!({body:"Hes about to tell a story and wants you to listen.", start_index:0, end_index:28, user_id:user.id, track_id:blueTrack.id})
-Annotation.create!({body:"Dirt road is a common country trope.", start_index:9, end_index:19, user_id:user.id, track_id:countryTrack.id})
-Annotation.create!({body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus mi in enim rutrum, vel lobortis nibh facilisis. Integer sit amet suscipit tellus. Nulla sit amet lectus eu orci eleifend fringilla. Maecenas elit dolor, tristique in metus eu, vestibulum varius ante. Nunc mattis tempus augue, vitae fermentum ligula tempus at. Duis vestibulum bibendum nibh, ut viverra massa dictum at. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris volutpat, risus ac posuere tristique, eros massa finibus justo, in porttitor mauris orci et nunc. Donec eu sodales lacus, et dictum dolor. Morbi nec facilisis quam. Sed vel iaculis metus, nec suscipit dolor. Donec gravida viverra eros, ac vulputate risus lacinia auctor. Donec mi ante, pharetra vel molestie eu, ultricies vel metus. Sed a nibh lorem.
-
-Cras consequat lorem ac interdum fermentum. Fusce ipsum ex, volutpat sit amet eros sed, placerat suscipit sapien. Donec ullamcorper consectetur nibh, ac semper massa cursus sit amet. Etiam est turpis, blandit sit amet aliquam vel, condimentum at ligula. Quisque erat magna, molestie non aliquet lacinia, malesuada at enim. Nulla a turpis aliquet, molestie nibh imperdiet, dictum turpis. Phasellus gravida est leo, vel vestibulum ipsum maximus quis. Duis blandit nisi a dui dictum, porta ullamcorper nulla rhoncus. Nam convallis, est eu tristique dapibus, elit mauris vehicula leo, vel cursus nisi tellus at purus. Etiam pharetra metus nunc, vel sollicitudin tellus pellentesque vel. Integer eget efficitur ex. Praesent urna eros, rutrum egestas porttitor et, aliquet sed nibh.
-
-Nulla in varius mi. Pellentesque tempus, augue a rutrum euismod, turpis ex fermentum sem, vitae sollicitudin metus ex et libero. Etiam et condimentum sem. Nulla scelerisque rutrum pellentesque. Etiam consequat, mi nec pharetra viverra, massa urna dictum purus, sed pharetra massa quam tincidunt urna. Vivamus hendrerit cursus porta. Vestibulum in nisi sed lacus gravida molestie. Phasellus quis orci sagittis ligula aliquam mattis id eu nibh.", start_index:20, end_index:30, user_id:user.id, track_id:countryTrack.id})
+Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants to seize his opportunity to snatch up his girl he has in mind.", start_index:9, end_index:79, user_id:user2.id, track_id:knowTrack.id})
+Annotation.create!({body:"asfdsafdasfdsafasdfadsfsdafasdfasdfsa f dsafds fasdfas d fsafsfdsaf sfadafasda sa", start_index:250, end_index:310, user_id:user.id, track_id:knowTrack.id})
