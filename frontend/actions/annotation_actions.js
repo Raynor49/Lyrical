@@ -2,6 +2,7 @@ import * as APIUtil from '../util/annotation_api_util.js';
 
 export const REMOVE_ANNOTATION = 'REMOVE_ANNOTATION';
 export const RECEIVE_ANNOTATION = 'RECEIVE_ANNOTATION';
+export const RECEIVE_ALL_ANNOTATIONS = 'RECEIVE_ALL_ANNOTATIONS';
 
 export const receiveAnnotation = (annotation) => {
   return({
@@ -23,8 +24,21 @@ export const requestAnnotation = (id) => dispatch => {
   ));
 };
 
-export const createAnnotation = (annotationData) => dispatch => {
-  return(APIUtil.createAnnotation(annotationData).then(
+export const receiveAllAnnotations = (annotations) => {
+
+  return({
+    type: RECEIVE_ALL_ANNOTATIONS,
+    annotations
+  });
+};
+export const requestAllAnnotations = () => dispatch => {
+  return(APIUtil.fetchAnnotations().then(
+    annotations => dispatch(receiveAllAnnotations(annotations))
+  ));
+};
+
+export const createAnnotation = (trackId, annotationData) => dispatch => {
+  return(APIUtil.createAnnotation(trackId, annotationData).then(
     annotation => dispatch(receiveAnnotation(annotation))
   ));
 };

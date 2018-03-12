@@ -17,7 +17,7 @@ class Api::TracksController < ApplicationController
   end
 
   def show
-    @track = Track.find(params[:id])
+    @track = Track.includes(:annotations).find(params[:id])
     render :show
   end
 

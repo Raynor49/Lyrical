@@ -1,9 +1,8 @@
 class Api::AnnotationsController < ApplicationController
-  # def index
-  #   debugger
-  #   @annotations = Track.find(params[:track_id]).annotations
-  #   render :index
-  # end
+  def index
+    @annotations = Annotation.all
+    render :index
+  end
 
   def create
     @annotation = Annotation.new(annotation_params)

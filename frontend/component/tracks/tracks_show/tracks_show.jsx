@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter, Link, Redirect } from 'react-router-dom';
+import { withRouter, Link, Redirect, Route } from 'react-router-dom';
+import AnnotationContainer from '../../annotations/annotation_container';
 
 class TrackShow extends React.Component{
   constructor(props){
@@ -8,13 +9,12 @@ class TrackShow extends React.Component{
   }
 
   componentDidMount(){
-    //
-    this.props.requestAllTracks();
+    // this.props.requestAllTracks();
     this.props.requestTrack(this.props.id);
+    this.props.requestAllAnnotations();
   }
 
   handleClick(e){
-
     e.preventDefault();
     this.props.deleteTrack(this.props.id).then(
       () => this.props.history.push('/')
@@ -23,19 +23,27 @@ class TrackShow extends React.Component{
 
   render(){
     let trackToShow;
+    let annotation = <div></div>;
     if (this.props.track === undefined){
       trackToShow = {title:''};
     }else{
       trackToShow = this.props.track;
+      annotation = <Route path='/tracks/:trackId/annotations/:annotationId' component={AnnotationContainer} />;
+        // <AnnotationContainer
+        //   currentUser={this.props.currentUser}
+        //   track={this.props.track}
+        //   />;
     }
 
     let editLink = '';
     let deleteButton = '';
+
     if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = <Link className='track-edit-link' to={`/tracks/${this.props.id}/edit`}>Edit Track</Link>;
       deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
-    }
 
+    }
+    //need to map here and render some as normal text and render some as link components
     return(
       <div>
         <ul className="track-header">
@@ -46,7 +54,9 @@ class TrackShow extends React.Component{
           <li className='edit-delete-links' >{editLink} {deleteButton}</li>
         </ul>
 
+
         <pre className='lyrics'>{trackToShow.lyrics}</pre>
+        {annotation}
       </div>
     );
   }

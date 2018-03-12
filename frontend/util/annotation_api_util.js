@@ -14,6 +14,12 @@ export const fetchAnnotation = (id) => {
     method: 'GET',
   }));
 };
+export const fetchAnnotations = () => {
+  return($.ajax({
+    url: `/api/annotations/`,
+    method: 'GET',
+  }));
+};
 
 export const updateAnnotation = (annotation) => {
   return($.ajax({

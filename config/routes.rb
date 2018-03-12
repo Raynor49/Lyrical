@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :tracks, except: [:new, :edit] do
       resources :annotations, only: [:create]
     end
-    resources :annotations, only: [:show, :destroy, :update]
+    resources :annotations, only: [:show, :destroy, :update, :index]
   end
   root "static_pages#root"
 end

@@ -1,8 +1,10 @@
 import {connect} from 'react-redux';
 import TracksShow from './tracks_show.jsx';
 import { requestTrack, requestAllTracks, deleteTrack } from '../../../actions/track_actions';
+import { requestAllAnnotations } from '../../../actions/annotation_actions';
 
 const mapStateToProps = (state, ownParams) => {
+
   return({
     id: ownParams.match.params.trackId,
     track: state.entities.tracks[ownParams.match.params.trackId],
@@ -15,7 +17,8 @@ const mapDispatchToProps = (dispatch) => {
   return({
     requestTrack: (id) => dispatch(requestTrack(id)),
     requestAllTracks: () => dispatch(requestAllTracks()),
-    deleteTrack: (id) => dispatch(deleteTrack(id))
+    deleteTrack: (id) => dispatch(deleteTrack(id)),
+    requestAllAnnotations: () => dispatch(requestAllAnnotations())
   });
 };
 
