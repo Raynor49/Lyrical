@@ -31694,3 +31694,687 @@ Processing by Api::TracksController#index as JSON
 Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:05:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:05:59 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (12.5ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:06:01 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+Started GET "/api/tracks/18" for 127.0.0.1 at 2018-03-11 17:06:01 -0400
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"18"}
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering api/tracks/show.json.jbuilder
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/show.json.jbuilder (3.3ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 2.3ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (20.2ms)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:06:04 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (15.7ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:07:17 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:07:18 -0400
+Processing by Api::TracksController#index as JSON
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendering api/tracks/index.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/index.json.jbuilder (11.5ms)
+Completed 200 OK in 32ms (Views: 12.5ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:07:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:07:19 -0400
+Processing by Api::TracksController#index as JSON
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendering api/tracks/index.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/index.json.jbuilder (8.9ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:07:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:07:23 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (16.9ms)
+Completed 200 OK in 24ms (Views: 19.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:08:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:08:10 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (6.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" ORDER BY "tracks"."created_at" DESC[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/index.json.jbuilder (28.0ms)
+Completed 200 OK in 38ms (Views: 25.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:08:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:08:11 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" ORDER BY "tracks"."created_at" DESC[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/index.json.jbuilder (11.7ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 17:08:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 17:08:12 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks" ORDER BY "tracks"."created_at" DESC[0m
+  Rendered api/tracks/_track.json.jbuilder (0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/index.json.jbuilder (9.7ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 19:44:33 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 1136ms (Views: 1132.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 19:44:34 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (64.3ms)
+Completed 200 OK in 74ms (Views: 48.3ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/api/annotations" for 127.0.0.1 at 2018-03-11 19:45:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/annotations"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTrack Load (0.9ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+Started POST "/api/tracks/17/annotations" for 127.0.0.1 at 2018-03-11 19:48:08 -0400
+Processing by Api::AnnotationsController#create as JSON
+  Parameters: {"annotation"=>{"body"=>"THIS WAS CREATED.", "start_index"=>"34", "end_index"=>"233", "user_id"=>"5", "track_id"=>"17"}, "track_id"=>"17"}
+Unpermitted parameters: :user_id, :track_id
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.3ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/annotations_controller.rb:10:in `create'
+
+Started POST "/api/tracks/17/annotations" for 127.0.0.1 at 2018-03-11 19:49:13 -0400
+Processing by Api::AnnotationsController#create as JSON
+  Parameters: {"annotation"=>{"body"=>"THIS WAS CREATED.", "start_index"=>"34", "end_index"=>"233"}, "track_id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "F_K_bcXDZliZXwAPc8dgwA"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/api/annotations_controller.rb:10:in `create'
+
+Started POST "/api/session" for 127.0.0.1 at 2018-03-11 19:50:14 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"SeededUser", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "SeededUser"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["username", "SeededUser"], ["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["updated_at", "2018-03-11 23:50:15.027773"], ["id", 5]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 90ms (Views: 6.6ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/api/tracks/17/annotations" for 127.0.0.1 at 2018-03-11 19:50:20 -0400
+Processing by Api::AnnotationsController#create as JSON
+  Parameters: {"annotation"=>{"body"=>"THIS WAS CREATED.", "start_index"=>"34", "end_index"=>"233"}, "track_id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "annotations" ("body", "track_id", "user_id", "start_index", "end_index", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["body", "THIS WAS CREATED."], ["track_id", 17], ["user_id", 5], ["start_index", 34], ["end_index", 233], ["created_at", "2018-03-11 23:50:20.606625"], ["updated_at", "2018-03-11 23:50:20.606625"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/annotations/show.json.jbuilder
+  Rendered api/annotations/_annotation.json.jbuilder (0.4ms)
+  Rendered api/annotations/show.json.jbuilder (2.0ms)
+Completed 200 OK in 26ms (Views: 6.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/annotations/8" for 127.0.0.1 at 2018-03-11 20:20:25 -0400
+Processing by Api::AnnotationsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mAnnotation Load (0.6ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering api/annotations/show.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered api/annotations/_annotation.json.jbuilder (1.9ms)
+  Rendered api/annotations/show.json.jbuilder (3.2ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mAnnotation Load (0.7ms)[0m  [1m[34mSELECT "annotations".* FROM "annotations"[0m
+Started DELETE "/api/annotations/6" for 127.0.0.1 at 2018-03-11 20:28:50 -0400
+Processing by Api::AnnotationsController#destroy as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mAnnotation Load (0.3ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "annotations" WHERE "annotations"."id" = $1[0m  [["id", 6]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 6.9ms)
+
+
+  [1m[36mAnnotation Load (0.4ms)[0m  [1m[34mSELECT "annotations".* FROM "annotations"[0m
+Started GET "/api/annotations/8" for 127.0.0.1 at 2018-03-11 20:47:29 -0400
+Processing by Api::AnnotationsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mAnnotation Load (0.3ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering api/annotations/show.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered api/annotations/_annotation.json.jbuilder (1.8ms)
+  Rendered api/annotations/show.json.jbuilder (3.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 20:47:36 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 290ms (Views: 288.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:47:36 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (12.0ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/api/annotations/8" for 127.0.0.1 at 2018-03-11 20:48:04 -0400
+Processing by Api::AnnotationsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mAnnotation Load (0.3ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering api/annotations/show.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered api/annotations/_annotation.json.jbuilder (2.1ms)
+  Rendered api/annotations/show.json.jbuilder (3.9ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 20:48:13 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:48:13 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (12.3ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/api/annotations/8" for 127.0.0.1 at 2018-03-11 20:48:43 -0400
+Processing by Api::AnnotationsController#show as JSON
+  Parameters: {"id"=>"8"}
+  [1m[36mAnnotation Load (0.4ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering api/annotations/show.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered api/annotations/_annotation.json.jbuilder (1.8ms)
+  Rendered api/annotations/show.json.jbuilder (3.2ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 20:53:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:19 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (13.0ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:21 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+Started GET "/api/tracks/17" for 127.0.0.1 at 2018-03-11 20:53:21 -0400
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mTrack Load (2.0ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  [1m[36mTrack Load (0.6ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 17]]
+  Rendered api/tracks/show.json.jbuilder (3.5ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (23.8ms)
+Completed 200 OK in 33ms (Views: 26.8ms | ActiveRecord: 5.5ms)
+
+
+Started DELETE "/api/tracks/17" for 127.0.0.1 at 2018-03-11 20:53:24 -0400
+Processing by Api::TracksController#destroy as JSON
+  Parameters: {"id"=>"17"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mTrack Load (0.3ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "tracks" WHERE "tracks"."id" = $1[0m  [["id", 17]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:24 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.7ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/index.json.jbuilder (15.9ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:37 -0400
+Processing by Api::TracksController#create as JSON
+  Parameters: {"track"=>{"title"=>"asdfasdfa", "lyrics"=>"asdfasfasdf", "artist"=>"asdfsfa", "album"=>"fdsafasdfasdfadafsdad", "genre"=>"Country"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tracks" ("title", "artist", "album", "genre", "lyrics", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "asdfasdfa"], ["artist", "asdfsfa"], ["album", "fdsafasdfasdfadafsdad"], ["genre", "Country"], ["lyrics", "asdfasfasdf"], ["user_id", 5], ["created_at", "2018-03-12 00:53:37.530594"], ["updated_at", "2018-03-12 00:53:37.530594"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/show.json.jbuilder (2.7ms)
+Completed 200 OK in 22ms (Views: 6.4ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:37 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+Started GET "/api/tracks/21" for 127.0.0.1 at 2018-03-11 20:53:37 -0400
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"21"}
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[36mTrack Load (1.0ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/show.json.jbuilder (4.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 1.9ms)
+
+
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (21.5ms)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 20:53:43 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.5ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (17.4ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 21:10:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 309ms (Views: 307.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 21:10:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 282ms (Views: 280.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 21:10:30 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (13.9ms)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 21:10:33 -0400
+Processing by Api::TracksController#index as JSON
+Started GET "/api/tracks/19" for 127.0.0.1 at 2018-03-11 21:10:33 -0400
+  Rendering api/tracks/index.json.jbuilder
+Processing by Api::TracksController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.3ms)
+  [1m[36mTrack Load (1.7ms)[0m  [1m[34mSELECT  "tracks".* FROM "tracks" WHERE "tracks"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendering api/tracks/show.json.jbuilder
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/show.json.jbuilder (4.0ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (16.1ms)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 21:10:35 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.7ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (12.8ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-11 21:19:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3YhrYem1hMk-qHsTXBbavw"], ["LIMIT", 1]]
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 297ms (Views: 295.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2018-03-11 21:19:44 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (0.4ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  Rendered api/tracks/_track.json.jbuilder (0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 18]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 19]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 20]]
+  Rendered api/tracks/_track.json.jbuilder (0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 21]]
+  Rendered api/tracks/index.json.jbuilder (10.3ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/annotations/7" for 127.0.0.1 at 2018-03-11 21:22:45 -0400
+Processing by Api::AnnotationsController#show as JSON
+  Parameters: {"id"=>"7"}
+  [1m[36mAnnotation Load (0.3ms)[0m  [1m[34mSELECT  "annotations".* FROM "annotations" WHERE "annotations"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering api/annotations/show.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered api/annotations/_annotation.json.jbuilder (2.6ms)
+  Rendered api/annotations/show.json.jbuilder (4.1ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
-import {fetchTracks, fetchTrack, updateTrack} from './util/track_api_util.js';
-import { receiveAllTracks, requestAllTracks } from './actions/track_actions.js';
+import {createAnnotation, fetchAnnotation, updateAnnotation} from './util/annotation_api_util.js';
+import { receiveAnnotation, requestAnnotation } from './actions/annotation_actions.js';
 import Root from './component/root.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.createTrack = createTrack;
   // window.updateTrack = updateTrack;
   // window.requestAllTracks = requestAllTracks;
+  // window.createAnnotation = createAnnotation;
+  // window.requestAnnotation = requestAnnotation;
+  // window.receiveAnnotation = receiveAnnotation;
+  // window.fetchAnnotation = fetchAnnotation;
   // window.getState = store.getState;
   // window.dispatch = store.dispatch; // just for testing!
   ReactDOM.render(<Root store={store} />, document.getElementById('root'));
