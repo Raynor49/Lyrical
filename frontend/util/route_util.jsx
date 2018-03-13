@@ -24,6 +24,14 @@ const Auth = ({ component: Component, path, loggedIn, correctUser, exact }) => (
 
 const mapStateToProps = (state, ownProps) => {
   const loggedIn = Boolean(state.session.currentUser);
+  return(
+    {
+      loggedIn: loggedIn,
+    }
+  );
+};
+const mapStateToProps2 = (state, ownProps) => {
+  const loggedIn = Boolean(state.session.currentUser);
   let correctUser;
   if(loggedIn && state.entities.tracks[parseInt(ownProps.computedMatch.params.trackId)]){
     correctUser = Boolean(state.session.currentUser.id === state.entities.tracks[parseInt(ownProps.computedMatch.params.trackId)].user_id);
@@ -39,4 +47,4 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
-export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
+export const AuthRoute = withRouter(connect(mapStateToProps2)(Auth));

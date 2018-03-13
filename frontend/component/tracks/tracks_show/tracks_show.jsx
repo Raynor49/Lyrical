@@ -1,14 +1,23 @@
 import React from 'react';
 import { withRouter, Link, Redirect, Route } from 'react-router-dom';
-import AnnotationContainer from '../../annotations/annotation_container';
+import AnnotationContainer from '../../annotations/annotations_show/annotation_container';
+import AnnotationFormContainer from '../../annotations/annotations_form/annotations_form_container';
 import Highlight from '../../highlights/highlights.jsx';
+import {ProtectedRoute, AuthRoute} from '../../../util/route_util.jsx';
 
 class TrackShow extends React.Component{
   constructor(props){
     super(props);
-    this.state = {showStatus: false, startIndex: 0, endIndex: 0,
-    lyrics: "", selectedAnnotationId: null};
+    this.state = {showStatus: true, startIndex: 0, endIndex: 0,
+    text: "", selectedAnnotationId: null};
     this.handleClick = this.handleClick.bind(this);
+    this.selectText = this.selectText.bind(this);
+  }
+
+  componentWillMount(){
+    this.setState({
+      showStatus: true
+    });
   }
 
   componentDidMount(){
@@ -53,17 +62,43 @@ class TrackShow extends React.Component{
 
   }
 
+  selectText() {
+    debugger
+    let selObj = window.getSelection();
+    let selRange = selObj.getRangeAt(0);
+    let startidx = selRange.startOffset;
+    let endidx = selRange.endOffset;
+    let text = selObj.toString();
+
+    this.setState({
+      startIndex: startidx,
+      endIndex: endidx,
+      text: text,
+      showStatus: false
+    });
+  }
+
   render(){
     let trackToShow;
     let annotation = <div></div>;
+    let annotationForm = <div></div>;
     let highlightLyrics;
+
     if (this.props.track === undefined){
       trackToShow = {title:''};
       highlightLyrics = '';
     }else{
       trackToShow = this.props.track;
       annotation = <Route path='/tracks/:trackId/annotations/:annotationId' component={AnnotationContainer} />;
+      annotationForm = <ProtectedRoute path='/tracks/:trackId/annotations/new' component={AnnotationFormContainer} />;
       highlightLyrics = this.renderHighlights(trackToShow.annotations, trackToShow.lyrics);
+    }
+
+    let annotationShowOrForm;
+    if(this.state.showStatus){
+      annotationShowOrForm = annotation;
+    }else{
+      annotationShowOrForm = annotationForm;
     }
 
     let editLink = '';
@@ -72,7 +107,6 @@ class TrackShow extends React.Component{
     if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = <Link className='track-edit-link' to={`/tracks/${this.props.id}/edit`}>Edit Track</Link>;
       deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
-
     }
 
     // const annotations = [
@@ -91,12 +125,10 @@ class TrackShow extends React.Component{
           <li className='edit-delete-links' >{editLink} {deleteButton}</li>
         </ul>
 
-
-
         <div className='lyrics-annotation'>
-          <pre className='lyrics'>{highlightLyrics}</pre>
+          <pre onMouseUp={this.selectText} className='lyrics'>{highlightLyrics}</pre>
           <div className='annotation-box'>
-            {annotation}
+            {annotationShowOrForm}
           </div>
         </div>
 
