@@ -6,8 +6,12 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :tracks, except: [:new, :edit] do
       resources :annotations, only: [:create]
+      resources :comments, only: [:create, :index]
     end
-    resources :annotations, only: [:show, :destroy, :update, :index]
+    resources :annotations, only: [:show, :destroy, :update, :index] do
+      resources :comments, only: [:create, :index]
+    end
+    resources :comments, only: [:show, :destroy, :update]
   end
   root "static_pages#root"
 end

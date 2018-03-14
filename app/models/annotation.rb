@@ -11,5 +11,5 @@ class Annotation < ApplicationRecord
     foreign_key: :user_id,
     class_name: :User
 
-
+  has_many :comments, as: :commentable
 end
