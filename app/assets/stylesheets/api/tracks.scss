@@ -3,11 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .tracklist{
   margin: auto;
-  width: 60%;
+  width: 80%;
   height: 900px;
   border-right: 1px solid grey;
   border-left: 1px solid grey;
   background-color: #f0ead6;
+}
+
+.tracks-index{
 }
 
 .track-show-page{
@@ -21,9 +24,12 @@
 }
 
 .track-item{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
   display: flex;
   font-family: sans-serif;
-  border-bottom: 1px solid lightgrey;
   width: 100%;
   justify-content: space-between;
   font-weight: 700;
@@ -32,6 +38,7 @@
 .track-item:hover{
   cursor: pointer;
   background-color: #ffff64;
+  border-bottom: 2px solid grey;
 }
 
 .track-idx-num{
@@ -227,4 +234,8 @@
   color: #ffff64;
   cursor: pointer;
   border-bottom: 1px solid #ffff64;
+}
+
+.lyric-component{
+  display: inline;
 }

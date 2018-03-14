@@ -38,7 +38,7 @@ class TrackShow extends React.Component{
           );
         });
       }
-      
+
       let currentAnnotationIdx = 0;
       let text = "";
       for (let i = 0; i < lyrics.length; i++) {
@@ -71,7 +71,7 @@ class TrackShow extends React.Component{
                           openModal={this.props.openModal}
                           text={text}
                           trackId={this.props.id}
-                          offset={annotations[currentAnnotationIdx-1]}
+                          offset={annotations[currentAnnotationIdx-1] ? annotations[currentAnnotationIdx-1].end_index : 0}
                           history={this.props.history}
                   />);
 
@@ -87,26 +87,6 @@ class TrackShow extends React.Component{
                     />);
 
   }
-  //
-  // selectText() {
-  //   if (window.getSelection().type !== "None" && window.getSelection().toString() !== ""){
-  //     let selObj = window.getSelection();
-  //     let selRange = selObj.getRangeAt(0);
-  //     let startidx = selRange.startOffset;
-  //     let endidx = selRange.endOffset;
-  //     let text = selObj.toString();
-  //     this.setState({
-  //       startIndex: startidx,
-  //       endIndex: endidx,
-  //       text: text,
-  //     });
-  //     if(this.props.currentUser){
-  //       this.props.history.push(`/tracks/${this.props.id}/annotations/new/${startidx}/${endidx}`);
-  //     }else{
-  //       this.props.openModal('signup');
-  //     }
-  //   }
-  // }
 
   render(){
     let trackToShow;
@@ -120,8 +100,6 @@ class TrackShow extends React.Component{
       trackToShow = this.props.track;
 
       highlightLyrics = this.renderHighlights(this.props.annotations, trackToShow.lyrics);
-
-
     }
 
     let editLink = '';
@@ -132,7 +110,6 @@ class TrackShow extends React.Component{
       deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
     }
 
-    //need to map here and render some as normal text and render some as link components
     return(
       <div className='track-show-page'>
         <ul className="track-header">

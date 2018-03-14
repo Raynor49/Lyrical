@@ -5,11 +5,14 @@ class Api::AnnotationsController < ApplicationController
   end
 
   def create
+    allAnnotations = Annotation.all
+
     @annotation = Annotation.new(annotation_params)
     @annotation.user_id = current_user.id
     @annotation.track_id = params[:track_id]
 
-    if @annotation.save
+
+    if (@annotation.start_index < @annotation.end_index && @annotation.save)
       render :show
     else
       render json: @annotation.errors.full_messages, status: 422

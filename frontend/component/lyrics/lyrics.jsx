@@ -8,18 +8,22 @@ class Lyrics extends React.Component {
 
   handleMouseUp(e) {
     if (window.getSelection().type !== "None" && window.getSelection().toString() !== ""){
-
       let selObj = window.getSelection();
       let selRange = selObj.getRangeAt(0);
       let startidx = selRange.startOffset + parseInt(this.props.offset);
       let endidx = selRange.endOffset + parseInt(this.props.offset);
       let text = selObj.toString();
+      //
 
-      if(this.props.currentUser){
+      if(startidx < endidx && this.props.currentUser){
         this.props.history.push(`/tracks/${this.props.trackId}/annotations/new/${startidx}/${endidx}`);
-      }else{
+      }else if(!this.props.currentUser){
         this.props.openModal('signup');
+      }else{
+        this.props.history.push(`/tracks/${this.props.trackId}`);
       }
+    }else{
+      this.props.history.push(`/tracks/${this.props.trackId}`);
     }
 
   }

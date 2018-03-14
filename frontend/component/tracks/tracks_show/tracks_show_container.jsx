@@ -6,6 +6,7 @@ import { openModal, closeModal } from '../../../actions/modal_actions';
 
 const mapStateToProps = (state, ownParams) => {
   const track = state.entities.tracks[ownParams.match.params.trackId];
+
   return({
     id: ownParams.match.params.trackId,
     track,

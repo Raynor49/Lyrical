@@ -16,7 +16,7 @@ class TrackIndex extends React.Component{
       );
     });
     return(
-      <div>
+      <div className='tracks-index'>
         <div className='cover-image'>
         </div>
         <h1 className='top-songs'>Top Songs</h1>
