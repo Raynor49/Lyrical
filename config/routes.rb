@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :annotations, only: [:show, :destroy, :update, :index] do
       resources :comments, only: [:create, :index]
     end
-    resources :comments, only: [:show, :destroy, :update]
+    resources :comments, only: [:destroy]
   end
   root "static_pages#root"
 end
