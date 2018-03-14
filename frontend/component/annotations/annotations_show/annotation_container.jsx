@@ -6,7 +6,7 @@ import Annotation from './annotation';
 const mapStateToProps = (state, ownParams) => {
   return({
     id: ownParams.match.params.annotationId,
-    annotation: state.entities.tracks[ownParams.match.params.trackId].annotations[ownParams.match.params.annotationId]
+    annotation: state.entities.annotations[ownParams.match.params.annotationId]
   });
 };
 

@@ -1,5 +1,7 @@
-json.partial! 'api/tracks/track', track: @track
-json.annotation_ids @track.annotations.pluck(:id)
+json.track do
+  json.partial! 'api/tracks/track', track: @track
+  json.annotation_ids @track.annotations.pluck(:id)
+end
 
 # also send back annotations
 json.annotations do

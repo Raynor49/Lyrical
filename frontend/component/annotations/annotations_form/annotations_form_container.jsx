@@ -4,15 +4,20 @@ import { createAnnotation } from '../../../actions/annotation_actions';
 import AnnotationForm from './annotations_form';
 
 const mapStateToProps = (state, ownParams) => {
+  
   return({
+    body: '',
+    startIndex: ownParams.match.params.startIdx,
+    endIndex: ownParams.match.params.endIdx,
+    trackId: ownParams.match.params.trackId
   });
 };
 
 const mapDispatchToProps = (dispatch) => {
   return({
-    createAnnotation: (trackId, annotation) => dispatch(createAnnotation(trackId, annotation))
+    action: (trackId, annotation) => dispatch(createAnnotation(trackId, annotation))
   });
 };
 
 
-export default connect(null,mapDispatchToProps)(AnnotationForm);
+export default connect(mapStateToProps,mapDispatchToProps)(AnnotationForm);

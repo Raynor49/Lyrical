@@ -361,5 +361,5 @@ Yeah, you've known it the whole time",
 
 Annotation.destroy_all
 Annotation.create!({body:"Hes about to tell a story and wants you to listen.", start_index:0, end_index:28, user_id:user.id, track_id:blueTrack.id})
-Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants to seize his opportunity to snatch up his girl he has in mind.", start_index:9, end_index:79, user_id:user2.id, track_id:knowTrack.id})
 Annotation.create!({body:"asfdsafdasfdsafasdfadsfsdafasdfasdfsa f dsafds fasdfas d fsafsfdsaf sfadafasda sa", start_index:250, end_index:310, user_id:user.id, track_id:knowTrack.id})
+Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants to seize his opportunity to snatch up his girl he has in mind.", start_index:9, end_index:79, user_id:user2.id, track_id:knowTrack.id})

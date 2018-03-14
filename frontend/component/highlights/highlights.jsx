@@ -1,9 +1,9 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import React from 'react';
 
-const Highlight = ({ annotation, lyrics }) => {
+const Highlight = ({ annotation, text }) => {
   return (
-    <Link className='highlight' to={`/tracks/${annotation.track_id}/annotations/${annotation.id}`}>{lyrics}</Link>
+    <NavLink activeClassName='highlight-selected' className='highlight' to={`/tracks/${annotation.track_id}/annotations/${annotation.id}`}>{text}</NavLink>
   );
 }
 

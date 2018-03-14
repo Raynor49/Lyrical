@@ -17,6 +17,7 @@
 .lyrics-annotation{
   display: flex;
   min-height: 800px;
+  min-width: 1000px;
 }
 
 .track-item{
@@ -109,6 +110,18 @@
   margin-left: 17%;
   padding-bottom: 50px;
   background-color: white;
+}
+
+.lyric-text-areas{
+  line-height: 1.2;
+  display: flex;
+  border: none;
+  outline: none;
+  resize: none;
+  // overflow: hidden;
+  font-family: sans-serif;
+  font-size: 17px;
+  width: 60%;
 }
 
 //-----------------------------------------

@@ -1,17 +1,19 @@
 import merge from 'lodash/merge';
 import {
   RECEIVE_ANNOTATION,
-  REMOVE_ANNOTATION,
-  RECEIVE_ALL_ANNOTATIONS
+  REMOVE_ANNOTATION
 } from '../actions/annotation_actions.js';
+import {
+  RECEIVE_TRACK
+} from '../actions/track_actions.js';
 
 
 const annotationReducer = (state={}, action) => {
 
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_ALL_ANNOTATIONS:
-      return action.annotations;
+    case RECEIVE_TRACK:
+      return action.annotations ? action.annotations : [];
     case RECEIVE_ANNOTATION:
       return merge({}, state, {[action.annotation.id]: action.annotation});
     case REMOVE_ANNOTATION:
