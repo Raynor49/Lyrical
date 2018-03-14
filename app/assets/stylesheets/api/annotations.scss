@@ -80,3 +80,21 @@ li{
   width: auto;
   font-weight: 700;
 }
+
+.annotation-form-button:hover{
+  box-shadow: 5px 5px;
+  cursor: pointer;
+}
+
+.delete-annotation{
+  margin-top: 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: #ffff64;
+  font-size: 15px;
+}
+
+.delete-annotation:hover{
+  box-shadow: 5px 5px;
+}

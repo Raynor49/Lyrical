@@ -7,7 +7,9 @@ const mapStateToProps = (state, ownParams) => {
   return({
     id: ownParams.match.params.annotationId,
     trackId: ownParams.match.params.trackId,
-    annotation: state.entities.annotations[ownParams.match.params.annotationId]
+    annotation: state.entities.annotations[ownParams.match.params.annotationId],
+    authorId: state.entities.annotations[ownParams.match.params.annotationId] ? state.entities.annotations[ownParams.match.params.annotationId].user_id : null,
+    currentUserId: state.session.currentUser ? state.session.currentUser.id : null
   });
 };
 

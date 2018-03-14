@@ -71,7 +71,7 @@ nav{
 }
 
 .sesh-links:hover{
-  border-bottom: 10px solid red;
+  border-bottom: 10px solid #ffff64;
   cursor: pointer;
 }
 
@@ -83,6 +83,7 @@ nav{
   letter-spacing: 5px;
   text-shadow: 4px 4px black;
 }
+
 
 .modal-background {
   position: fixed;
@@ -99,9 +100,30 @@ nav{
 }
 
 .close-x {
-  text-align: right;
+  width: 25px;
+  text-align: center;
+  margin-left: 120px;
   cursor: pointer;
  }
+.close-x:hover{
+  color: red;
+}
+
+.session-button{
+
+  margin-top: 10px;
+  font-family: sans-serif;
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: #ffff64;
+  font-size: 15px;
+}
+
+.session-button:hover{
+  background-color: yellow;
+  font-weight: bold;
+
+}
 
 .user {
   font-weight: 500;
@@ -128,6 +150,7 @@ nav{
 
 .new-song-link:hover{
   color: #ffff64;
+  font-weight: bold;
 }
 
 .cover-image{
