@@ -19,6 +19,7 @@ const annotationReducer = (state={}, action) => {
     case RECEIVE_ANNOTATION:
       return merge({}, state, {[action.annotation.id]: action.annotation});
     case RECEIVE_COMMENT:
+      if (action.comment.commentable_type === 'Track') return state;
       let otherState = merge( {}, state );
       otherState[action.comment.commentable_id].comment_ids.push(action.comment.id);
       return otherState;

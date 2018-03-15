@@ -1,6 +1,6 @@
 import React from 'react';
 import TrackCommentIndexItem from './track_comment_index_item.jsx';
-class CommentIndex extends React.Component{
+class TrackCommentIndex extends React.Component{
   constructor(props){
     super(props);
 
@@ -11,19 +11,22 @@ class CommentIndex extends React.Component{
   }
 
   render(){
-    debugger
     let comments = this.props.comments ? this.props.comments.map( (comment) => {
       return(
         <TrackCommentIndexItem
           body={comment.body}
           id={comment.id}
-          author={comment.author} />
+          author={comment.author}
+          currentUser={this.props.currentUser}
+          deleteComment={this.props.deleteComment}/>
       );
     }) : 'Loading Comments';
     return(
-      <ul>{comments}</ul>
+      <div className='comment-index-background'>
+        <ul className='comment-index'>{comments}</ul>
+      </div>
     );
   }
 }
 
-export default CommentIndex;
+export default TrackCommentIndex;

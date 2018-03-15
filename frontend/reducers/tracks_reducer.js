@@ -19,8 +19,9 @@ const tracksReducer = (state={}, action) => {
       otherState[action.annotation.track_id].annotation_ids.push(action.annotation.id);
       return otherState;
     case RECEIVE_COMMENT:
+      if (action.comment.commentable_type === 'Annotation') return state;
       let commentState = merge( {}, state );
-      commentState[action.comment.track_id].comment_ids.push(action.comment.id);
+      commentState[action.comment.commentable_id].comment_ids.push(action.comment.id);
       return commentState;
     case REMOVE_TRACK:
       let newState = merge( {}, state );

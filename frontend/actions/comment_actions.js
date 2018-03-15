@@ -17,13 +17,13 @@ export const receiveComment = (comment) => {
 //   ));
 // };
 
-export const createTrackComment = (comment) => dispatch => {
-  return(APIUtil.createTrackComment(comment).then(
+export const createTrackComment = (trackId, comment) => dispatch => {
+  return(APIUtil.createTrackComment(trackId, comment).then(
     comment => dispatch(receiveComment(comment))
   ));
 };
-export const createAnnotationComment = (comment) => dispatch => {
-  return(APIUtil.createAnnotationComment(comment).then(
+export const createAnnotationComment = (annotationId, comment) => dispatch => {
+  return(APIUtil.createAnnotationComment(annotationId, comment).then(
     comment => dispatch(receiveComment(comment))
   ));
 };

@@ -6,6 +6,7 @@ import Highlight from '../../highlights/highlights.jsx';
 import {ProtectedRoute, AuthRoute} from '../../../util/route_util.jsx';
 import Lyrics from '../../lyrics/lyrics';
 import TrackCommentIndexContainer from '../../comments/track_comments_index/track_comment_index_container';
+import TrackCommentFormContainer from '../../comments/track_comments_form/track_comment_form_container';
 
 class TrackShow extends React.Component{
   constructor(props){
@@ -56,7 +57,6 @@ class TrackShow extends React.Component{
                               history={this.props.history}
                     />);
 
-
           result.push(<Highlight key={i+1} annotation={currentAnnotation} text={lyrics.slice(currentAnnotation.start_index,currentAnnotation.end_index)} />);
 
           i = currentAnnotation.end_index - 1;
@@ -106,6 +106,7 @@ class TrackShow extends React.Component{
     let editLink = '';
     let deleteButton = '';
     let trackComments = '';
+    let trackCommentForm = '';
 
     if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = <Link className='track-edit-link' to={`/tracks/${this.props.id}/edit`}>Edit Track</Link>;
@@ -113,6 +114,10 @@ class TrackShow extends React.Component{
     }
     if (this.props.track !== undefined){
       trackComments = <TrackCommentIndexContainer trackId={this.props.track.id}/>;
+    }
+
+    if (this.props.track !== undefined && this.props.currentUser !== null){
+      trackCommentForm = <TrackCommentFormContainer trackId={this.props.track.id}/>;
     }
 
     return(
@@ -133,9 +138,11 @@ class TrackShow extends React.Component{
               <Route path='/tracks/:trackId/annotations/:annotationId' component={AnnotationContainer} />
             </Switch>
           </div>
+
         </div>
 
         <div className='track-comments'>
+          {trackCommentForm}
           {trackComments}
         </div>
 

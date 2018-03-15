@@ -1,12 +1,32 @@
 import React from 'react';
-const TrackCommentIndexItem = (props) => {
-  return(
-    <div>
-      <div>{props.author}</div>
-      <div>{props.body}</div>
-      <div>{props.id}</div>
-    </div>
-  );
-};
+
+class TrackCommentIndexItem extends React.Component{
+  constructor(props){
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e){
+    e.preventDefault();
+    this.props.deleteComment(this.props.id);
+  }
+
+  render(){
+    let deleteButton = '';
+
+    if (this.props.currentUser.username === this.props.author){
+      deleteButton = <input className='comment-delete-button' type='submit' value='Delete' onClick={this.handleClick} />;
+    }
+
+    return(
+      <div className='comment-item'>
+        <div className='comment-author'>{this.props.author}</div>
+        <div className='comment-body'>{this.props.body}</div>
+        {deleteButton}
+      </div>
+    );
+  }
+}
 
 export default TrackCommentIndexItem;
