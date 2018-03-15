@@ -4,10 +4,11 @@ export const REMOVE_ANNOTATION = 'REMOVE_ANNOTATION';
 export const RECEIVE_ANNOTATION = 'RECEIVE_ANNOTATION';
 export const RECEIVE_ALL_ANNOTATIONS = 'RECEIVE_ALL_ANNOTATIONS';
 
-export const receiveAnnotation = (annotation) => {
+export const receiveAnnotation = ({annotation, comments}) => {
   return({
     type: RECEIVE_ANNOTATION,
-    annotation
+    annotation,
+    comments
   });
 };
 

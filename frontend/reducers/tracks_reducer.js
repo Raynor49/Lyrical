@@ -5,6 +5,7 @@ import {
   REMOVE_TRACK
 } from '../actions/track_actions.js';
 import { RECEIVE_ANNOTATION } from '../actions/annotation_actions.js';
+import { RECEIVE_COMMENT } from '../actions/comment_actions.js';
 
 const tracksReducer = (state={}, action) => {
   Object.freeze(state);
@@ -17,6 +18,10 @@ const tracksReducer = (state={}, action) => {
       let otherState = merge( {}, state );
       otherState[action.annotation.track_id].annotation_ids.push(action.annotation.id);
       return otherState;
+    case RECEIVE_COMMENT:
+      let commentState = merge( {}, state );
+      commentState[action.comment.track_id].comment_ids.push(action.comment.id);
+      return commentState;
     case REMOVE_TRACK:
       let newState = merge( {}, state );
       delete newState[action.trackId];

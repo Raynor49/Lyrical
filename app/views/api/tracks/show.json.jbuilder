@@ -1,6 +1,7 @@
 json.track do
   json.partial! 'api/tracks/track', track: @track
   json.annotation_ids @track.annotations.pluck(:id)
+  json.comment_ids @track.comments.pluck(:id)
 end
 
 # also send back annotations
@@ -18,4 +19,4 @@ json.comments do
       json.partial! 'api/comments/comment/', comment: comment
     end
   end
-end 
+end

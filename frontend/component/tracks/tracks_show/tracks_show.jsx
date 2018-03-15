@@ -5,6 +5,7 @@ import AnnotationFormContainer from '../../annotations/annotations_form/annotati
 import Highlight from '../../highlights/highlights.jsx';
 import {ProtectedRoute, AuthRoute} from '../../../util/route_util.jsx';
 import Lyrics from '../../lyrics/lyrics';
+import TrackCommentIndexContainer from '../../comments/track_comments_index/track_comment_index_container';
 
 class TrackShow extends React.Component{
   constructor(props){
@@ -104,10 +105,14 @@ class TrackShow extends React.Component{
 
     let editLink = '';
     let deleteButton = '';
+    let trackComments = '';
 
     if ((this.props.currentUser !== null && this.props.track !== undefined) && this.props.currentUser.id === this.props.track.user_id){
       editLink = <Link className='track-edit-link' to={`/tracks/${this.props.id}/edit`}>Edit Track</Link>;
       deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
+    }
+    if (this.props.track !== undefined){
+      trackComments = <TrackCommentIndexContainer trackId={this.props.track.id}/>;
     }
 
     return(
@@ -128,6 +133,10 @@ class TrackShow extends React.Component{
               <Route path='/tracks/:trackId/annotations/:annotationId' component={AnnotationContainer} />
             </Switch>
           </div>
+        </div>
+
+        <div className='track-comments'>
+          {trackComments}
         </div>
 
       </div>

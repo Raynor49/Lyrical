@@ -21,11 +21,12 @@ export const requestAllTracks = () => dispatch => {
 };
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
-export const receiveTrack = ({ track, annotations }) => {
+export const receiveTrack = ({ track, annotations, comments }) => {
   return({
     type: RECEIVE_TRACK,
     track,
-    annotations
+    annotations,
+    comments
   });
 };
 

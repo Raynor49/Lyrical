@@ -30,7 +30,7 @@ export const createAnnotationComment = (annotationId, comment) => {
 
 export const deleteComment = (commentId) => {
   return($.ajax({
-    url: `api/comments/${commentId}`,
+    url: `/api/comments/${commentId}`,
     method: "DELETE"
   }));
 };

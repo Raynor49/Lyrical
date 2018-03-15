@@ -23,7 +23,7 @@ class Api::CommentsController < ApplicationController
     end
 
     @comment = @track_or_ann.comments.new(comment_params)
-
+    @comment.user_id = current_user.id
     if @comment.save
       render :show
     else
