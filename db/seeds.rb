@@ -368,5 +368,5 @@ Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants t
 Comment.destroy_all
 Comment.create!({body:'OMG this is the BEST song', user_id:user2.id, commentable:Track.first})
 Comment.create!({body:'I love it #ballin', user_id:user.id, commentable:Track.first})
-Comment.create!({body:'FANTASTIC!!1!', user_id:user2.id, commentable:Track.fourth})
-Comment.create!({body:'Boo bad song boooo', user_id:user.id, commentable:Track.fourth})
+Comment.create!({body:'FANTASTIC!!1!', user_id:user2.id, commentable:Annotation.third})
+Comment.create!({body:'This annotation is bad', user_id:user.id, commentable:Annotation.third})

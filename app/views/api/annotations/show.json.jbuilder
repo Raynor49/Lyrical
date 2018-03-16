@@ -1,6 +1,5 @@
 json.annotation do
   json.partial! 'api/annotations/annotation', annotation: @annotation
-  json.comment_ids @annotation.comments.pluck(:id)
 end
 
 json.comments do

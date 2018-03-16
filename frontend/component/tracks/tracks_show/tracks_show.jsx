@@ -5,8 +5,8 @@ import AnnotationFormContainer from '../../annotations/annotations_form/annotati
 import Highlight from '../../highlights/highlights.jsx';
 import {ProtectedRoute, AuthRoute} from '../../../util/route_util.jsx';
 import Lyrics from '../../lyrics/lyrics';
-import TrackCommentIndexContainer from '../../comments/track_comments_index/track_comment_index_container';
-import TrackCommentFormContainer from '../../comments/track_comments_form/track_comment_form_container';
+import CommentIndexContainer from '../../comments/comments_index/comment_index_container';
+import CommentFormContainer from '../../comments/comments_form/comment_form_container';
 
 class TrackShow extends React.Component{
   constructor(props){
@@ -59,6 +59,7 @@ class TrackShow extends React.Component{
 
           result.push(<Highlight key={i+1} annotation={currentAnnotation} text={lyrics.slice(currentAnnotation.start_index,currentAnnotation.end_index)} />);
 
+
           i = currentAnnotation.end_index - 1;
           text="";
           currentAnnotationIdx++;
@@ -99,7 +100,6 @@ class TrackShow extends React.Component{
       highlightLyrics = '';
     }else{
       trackToShow = this.props.track;
-
       highlightLyrics = this.renderHighlights(this.props.annotations, trackToShow.lyrics);
     }
 
@@ -113,11 +113,11 @@ class TrackShow extends React.Component{
       deleteButton = <button className='delete-track' onClick={this.handleClick}>Delete Track</button>;
     }
     if (this.props.track !== undefined){
-      trackComments = <TrackCommentIndexContainer trackId={this.props.track.id}/>;
+      trackComments = <CommentIndexContainer type='track' commentableId={this.props.track.id}/>;
     }
 
     if (this.props.track !== undefined && this.props.currentUser !== null){
-      trackCommentForm = <TrackCommentFormContainer trackId={this.props.track.id}/>;
+      trackCommentForm = <CommentFormContainer type='track' commentableId={this.props.track.id}/>;
     }
 
     return(

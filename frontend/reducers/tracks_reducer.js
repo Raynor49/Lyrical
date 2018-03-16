@@ -5,7 +5,7 @@ import {
   REMOVE_TRACK
 } from '../actions/track_actions.js';
 import { RECEIVE_ANNOTATION } from '../actions/annotation_actions.js';
-import { RECEIVE_COMMENT } from '../actions/comment_actions.js';
+import { RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions.js';
 
 const tracksReducer = (state={}, action) => {
   Object.freeze(state);
@@ -16,7 +16,8 @@ const tracksReducer = (state={}, action) => {
       return merge( {}, state, { [action.track.id]: action.track });
     case RECEIVE_ANNOTATION:
       let otherState = merge( {}, state );
-      otherState[action.annotation.track_id].annotation_ids.push(action.annotation.id);
+      otherState[action.annotation.track_id] && !otherState[action.annotation.track_id].annotation_ids.includes(action.annotation.id) ?
+        otherState[action.annotation.track_id].annotation_ids.push(action.annotation.id) : null;
       return otherState;
     case RECEIVE_COMMENT:
       if (action.comment.commentable_type === 'Annotation') return state;

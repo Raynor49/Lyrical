@@ -35,19 +35,32 @@
   border-left: 1px solid grey;
 }
 
+
 .track-comment-form-background{
   background-color: rgba(204,204,204,.2);
 
 }
 
+
 .track-comment-form-textbox{
-  width: 300px;
+  width: 200px;
+  height: 100px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.annotation-comment-form-textbox{
+  width: 200px;
   height: 100px;
   font-family: sans-serif;
   font-size: 15px;
 }
 
 .track-comment-form-textbox:hover{
+  box-shadow: #e509ef 0 0 0.3em inset;
+}
+
+.annotation-comment-form-textbox:hover{
   box-shadow: #e509ef 0 0 0.3em inset;
 }
 
@@ -71,7 +84,33 @@
   transition:.5s;
 }
 
+.annotation-comment-form-button{
+  display:block;
+  padding-bottom: 20px;
+  height: 30px;
+  line-height: 30px;
+  font-family: sans-serif;
+  cursor: pointer;
+  border: 2px solid black;
+  color: #0ecb27;
+  border-color: #0ecb27;
+  font-weight: 700;
+  font-size: 15px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
 .track-comment-form-button:hover{
+
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.annotation-comment-form-button:hover{
 
   background-color: lightgreen;
   cursor: pointer;
