@@ -138,13 +138,13 @@ class TrackShow extends React.Component{
               <Route path='/tracks/:trackId/annotations/:annotationId' component={AnnotationContainer} />
             </Switch>
           </div>
-
         </div>
-
         <div className='track-comments'>
           {trackCommentForm}
           {trackComments}
         </div>
+
+
 
       </div>
     );

@@ -17,86 +17,87 @@ user2 = User.create!({
 
 Track.destroy_all
 blueTrack = Track.create!({
-  title: 'Blue (Da Ba Dee)',
-  artist: 'Eiffel65',
-  album: 'Europop',
-  genre: 'pop',
-  lyrics: "[Intro]
-Yo, listen up, here's a story
-About a little guy that lives in a blue world
-And all day and all night and everything he sees is just blue
-Like him inside and outside
-Blue his house with a blue little window and a blue Corvette
-And everything is blue for him
-And hisself and everybody around
-'Cause he ain't got nobody to listen (to listen)
+  title: 'Baby Blue',
+  artist: 'Action Bronson',
+  album: 'Mr. Wonderful',
+  genre: 'Rap',
+  lyrics: "[Hook: Action Bronson]
+Why you always all on my back?
+Why you gotta do me like that?
+Why you gotta act like a bitch when I'm with you?
+Baby girl I'm blue
 
-[Hook]
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
+[Verse 1: Action Bronson]
+Because you treat me like shit
+I paid for the bed and never even slept in it
+I paid for that crib I never stepped foot in
+And now somebody else is eating all the pudding
+Things change, now my dashboard wooden
+All black Benz, like a young Doc Gooden
+Dark shades, cause I'm stone crazy
+Girl, we grown, stop playing on my phone, baby
+All your childish attempts to make me angry fall short
+Which only fuels the rage you have, because you have nothing
+Understandable, I'm shining brilliant with five Brazilians
+There were times I used to hide my feelings
+Now I'm butt naked in the Lamborghini
+And motherfuckers can't see me
+Wait 'til this chick see me on TV, I make the shit look easy
+Who would've thought I hit you right back?
 
-[Verse 1]
-I have a blue house with a blue window
-Blue is the color of all that I wear
-Blue are the streets and all the trees are too
-I have a girlfriend and she is so blue
-Blue are the people here that walk around
-Blue like my Corvette, it's in and outside
-Blue are the words I say and what I think
-Blue are the feelings that live inside me
+[Hook: Action Bronson]
+Why you always all on my back?
+Why you gotta do me like that?
+Why you gotta act like a bitch when I'm with you?
+Baby girl I'm blue
 
-[Hook]
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
+[Verse 2: Action Bronson]
+So many women wanna call me baby
+And you wonder why the fuck that I ain't call you lately
+Some would say that I'm the symbol for sex and uh
+Others would hate, but I don't give 'em no breath
+Go on a date, I'm at the crib with the chef and uh, that's me
+And you could order whatever
+The specialty is white snake and underwear sauce
+You could probably catch me somewhere where the sun is next
+And I understand that's only cause I'm popular
+I'm getting topped off in the front row of the opera
+As Bocelli sings the celly rings
+I gotta go, you'll never know how good it feels to lay in bed with king
+I'm not exactly flawless, but I'm gorgeous, just like a horse is
+I know the thought of me succeeding makes a lot of people nauseous
+Still I'm on the back of the boat taking pictures with the swordfish
 
-[Verse 1]
-I have a blue house with a blue window
-Blue is the color of all that I wear
-Blue are the streets and all the trees are too
-I have a girlfriend and she is so blue
-Blue are the people here that walk around
-Blue like my Corvette, it's in and outside
-Blue are the words I say and what I think
-Blue are the feelings that live inside me
+[Hook: Action Bronson]
+Why you always all on my back?
+Why you gotta do me like that?
+Why you gotta act like a bitch when I'm with you?
+Baby girl I'm blue
 
-[Hook]
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
+[Verse 3: Chance The Rapper]
+I hope you get a paper cut on your tongue
+From a razor in a paper cup
+I hope every soda you drink already shaken up
+I hope your dreams dry like raisins in the baking sun
+I hope your titties all saggy in your early 20's
+I hope there's always snow in your driveway
+I hope you never get off Fridays
+And you work at a Friday's that's always busy on Fridays
+I hope you win the lottery and lose your ticket
+I hope it's Ben and Socrates poop all up in your kitchen
+I hope the zipper on your jacket get stuck
+And your headphones short, and your charger don't work
+And you spill shit on your shirt
+I hope your tears don't hurt, and I can smile in your face
+Cut my losses, how Delilah changed my locks to a fade
+I hope you happy, I hope you happy
+I hope you ruined this shit for a reason, I hope you happy!
 
-[Bridge]
-Inside and outside
-Blue his house with a blue little window and a blue Corvette
-And everything is blue for him
-And hisself and everybody around
-'Cause he ain't got nobody to listen (to listen)
-
-[Hook]
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye
-I'm Blue – da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye, da ba dee da ba dye
-Da ba dee da ba dye",
+[Hook: Action Bronson]
+Why you always all on my back?
+Why you gotta do me like that?
+Why you gotta act like a bitch when I'm with you?
+Baby girl I'm blue",
   user_id: user.id
   })
 
@@ -316,7 +317,7 @@ Then it bunny-hopped off my shoulder, now my conscience dead
 Now the only guidance that I had is splattered on cement
 Actions speak louder than words, let me try this shit
 Dead",
-  user_id: user.id
+  user_id: user2.id
   })
 
 knowTrack = Track.create!({
@@ -358,9 +359,109 @@ Yeah, you've known it the whole time",
   user_id: user.id
   })
 
+Track.create!({
+    title: 'The Stand',
+    artist: 'Mother Mother',
+    album: 'Eureka',
+    genre: 'Pop',
+    lyrics:"Verse 1]
+Hey (hey hey)
+Tell me your weakness
+Oh I keep it a secret
+Oh come on just one vice
+All right, it's vodka on ice
+But then there's women on bikes
+Or just the women who straddle
+Oh now you are a handful
+I forgot about handfuls
+
+[Verse 2]
+Tell me your fears
+Okay, it's everyone here
+You mean just all of the people?
+Yeah, and all of their peers
+And all of their pets, and their chandeliers
+And their cigarettes
+I haven't smoked in years!
+
+[Chorus]
+I can hardly stand the sight. (Of it all.)
+I can hardly stand the sound. (Of it all.)
+I can hardly stand the taste. (Of it all.)
+I can hardly stand the smell. (Of it all.)
+
+[Verse 3]
+Talk about space
+Well it's a beautiful place!
+But it's so damn cold!
+Just for the human race
+But for the planets and the stars
+And everything else and Mars
+It's like paradise
+Spread out with a butter knife
+
+[Chorus] X2
+I can hardly stand the sight. (Of it all.)
+I can hardly stand the sound. (Of it all.)
+I can hardly stand the taste. (Of it all.)
+I can hardly stand the smell. (Of it all.)
+
+I can hardly stand, I can hardly stand!
+Everyone's fucked and they don't even know
+Everyone's fucked and they don't even know
+
+[Chorus]
+I can hardly stand the sight. (Of it all.)
+I can hardly stand the sound. (Of it all.)
+I can hardly stand the taste. (Of it all.)
+I can hardly stand the smell. (Of it all.)",
+    user_id: user.id
+    })
+
+Track.create!({
+    title: 'Goodbye Weekend',
+    artist: 'Mac DeMarco',
+    album: 'Salad Days',
+    genre: 'Pop',
+    lyrics:"[Verse 1]
+Goodbye, weekend
+So long, darling
+Macky's been a bad, bad boy
+And when they're preaching
+Be sure to change me
+Should rearrange me
+Or so they thought
+
+[Chorus]
+So don't go telling me how this boy should be leading
+His own life
+Sometimes rough but generally speaking I'm fine
+If you don't agree with the things that go on within my life
+Well, honey, that's fine just know that you're wasting your time
+
+[Verse 2]
+Sort me, place me
+Give me a sign
+Repeat the mantra
+When you're stepping out of line
+Give me, a number
+Something to be
+May help out the country boy
+But it won't work out on me
+
+[Chorus]
+So don't go telling me how this boy should be leading
+His own life
+Sometimes rough but generally speaking I'm fine
+If you don't agree with the things that go on within my life
+Well, honey, that's fine just know that you're wasting your time
+
+Ah, Gigi Bungsu",
+    user_id: user.id
+    })
+
 
 Annotation.destroy_all
-Annotation.create!({body:"Hes about to tell a story and wants you to listen.", start_index:0, end_index:28, user_id:user.id, track_id:blueTrack.id})
 Annotation.create!({body:"This part of the song is about his internal struggle :(", start_index:250, end_index:310, user_id:user.id, track_id:knowTrack.id})
 Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants to seize his opportunity to snatch up his girl he has in mind.", start_index:9, end_index:79, user_id:user2.id, track_id:knowTrack.id})
 

@@ -9,8 +9,6 @@
 .comment-index-background{
   padding-left: 25px;
   background-color: white;
-  margin-left: 17%;
-  margin-right: 23.8%;
   padding-bottom: 50px;
   border-left: 1px solid grey;
 }
@@ -27,11 +25,13 @@
   margin-bottom: 10px;
 }
 
+.track-comments{
+  width: 80%;
+}
+
 .track-comment-form{
   padding-left: 25px;
   background-color: white;
-  margin-left: 17%;
-  margin-right: 23.8%;
   border-left: 1px solid grey;
 }
 

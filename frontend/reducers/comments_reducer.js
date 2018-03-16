@@ -10,9 +10,9 @@ import { RECEIVE_ANNOTATION } from '../actions/annotation_actions.js';
 const commentReducer = (state={}, action) => {
   switch (action.type) {
     case RECEIVE_TRACK:
-      return action.comments ? merge({}, state, action.comments) : [];
+      return action.comments ? merge({}, state, action.comments) : merge({}, state);
     case RECEIVE_ANNOTATION:
-      return action.comments ? action.comments : [];
+      return action.comments ? merge({}, state, action.comments) : merge({}, state);
     case RECEIVE_COMMENT:
       return merge({}, state, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:
