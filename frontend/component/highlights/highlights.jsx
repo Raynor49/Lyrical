@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom';
 import React from 'react';
 
 const Highlight = ({ annotation, text }) => {
-  debugger
+  
   return (
     <NavLink
       activeClassName='highlight-selected'

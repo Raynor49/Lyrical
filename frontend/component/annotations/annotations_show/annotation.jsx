@@ -34,10 +34,10 @@ class Annotation extends React.Component{
           />;
     }
 
-    if (this.props.id !== undefined && this.props.currentUser !== null){
+    if (this.props.id !== undefined && this.props.currentUserId !== null){
       annotationCommentForm = <CommentFormContainer type='annotation' commentableId={this.props.id}/>;
     }
-    debugger
+
     return(
       <ul className='annotation'>
         <li className='annotation-author'>{this.props.annotation ? this.props.annotation.author : 'Loading Author'}</li>
