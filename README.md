@@ -1,24 +1,18 @@
-# README
+# Lyrical
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Lyrical is a clone of Rap Genius, a web application for posting lyrics to your favourite songs, as well as annotations on particular segments of those lyrics theorizing and discussing them, and comments on either the tracks themselves or the annotations of those tracks.
 
-Things you may want to cover:
+Check it out at https://lyrical-genius.herokuapp.com/
 
-* Ruby version
+## Home Page
+![alt text](https://github.com/Raynor49/Lyrical/blob/master/app/assets/images/Screen%20Shot%202018-03-18%20at%205.27.56%20PM.png)
 
-* System dependencies
+This application was made using a Ruby on Rails backend with a Javascript frontend.
 
-* Configuration
+## Track Show Page example
+![alt text](https://github.com/Raynor49/Lyrical/blob/master/app/assets/images/Screen%20Shot%202018-03-18%20at%205.42.07%20PM.png)
 
-* Database creation
+Much of the app takes place in the track show pages, where users are able to comment on and annotate lyrics. Most of the difficulty of this app came from trying to allow users to be able to highlight text on the track show pages, write and submit an annotation, and have their highlighted text change into a link which links to that annotation they submitted. I needed to write a method which checked the beginning and ending indices of each annotation and rendered sections of the lyrics as either a plaintext 'Lyrics' component or a linking 'Highlight' component depending on those indices.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Todos
+I plan on implementing a 'likes' feature for users to be able to vote on annotations and comments from other users.

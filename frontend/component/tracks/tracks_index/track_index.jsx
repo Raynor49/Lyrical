@@ -23,6 +23,10 @@ class TrackIndex extends React.Component{
         <ul className='tracklist'>
           {tracks}
         </ul>
+        <div className='personal-links'>
+          <a className='linkedin' href="http://www.linkedin.com/in/willis-roberts-8a3b8883">My LinkedIn!</a>
+          <a className='github' href="https://github.com/Raynor49">My GitHub!</a>
+        </div>
       </div>
     );
   }

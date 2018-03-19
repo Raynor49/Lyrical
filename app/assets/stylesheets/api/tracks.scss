@@ -130,7 +130,6 @@
   border: none;
   outline: none;
   resize: none;
-  // overflow: hidden;
   font-family: sans-serif;
   font-size: 17px;
   width: 60%;
@@ -242,4 +241,20 @@
 
 .lyric-component{
   display: inline;
+}
+
+.personal-links{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-size: 20px;
+}
+
+.linkedin{
+  margin-right: 25px;
+  color:#ffff64;
+}
+
+.github{
+  color:#ffff64;
 }

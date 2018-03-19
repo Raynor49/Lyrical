@@ -14,6 +14,18 @@ user2 = User.create!({
   username: 'RapGod',
   password: 'eminem'
   })
+user3 = User.create!({
+  username: 'Trevor',
+  password: 'Trevor'
+  })
+user4 = User.create!({
+  username: 'Kreed',
+  password: 'Kreedpass'
+  })
+user5 = User.create!({
+  username: 'noodle',
+  password: 'noodle'
+  })
 
 Track.destroy_all
 blueTrack = Track.create!({
@@ -101,7 +113,7 @@ Baby girl I'm blue",
   user_id: user.id
   })
 
-Track.create!({
+slimTrack= Track.create!({
   title: 'The Real Slim Shady',
   artist: 'Eminem',
   album: 'Marshall Mathers LP',
@@ -233,7 +245,7 @@ Fuck it, let’s all stand up!",
   user_id: user2.id
   })
 
-Track.create!({
+yonkers = Track.create!({
   title: 'Yonkers',
   artist: 'Tyler',
   album: 'Goblin',
@@ -359,7 +371,7 @@ Yeah, you've known it the whole time",
   user_id: user.id
   })
 
-Track.create!({
+standTrack = Track.create!({
     title: 'The Stand',
     artist: 'Mother Mother',
     album: 'Eureka',
@@ -418,7 +430,7 @@ I can hardly stand the smell. (Of it all.)",
     user_id: user.id
     })
 
-Track.create!({
+macTrack = Track.create!({
     title: 'Goodbye Weekend',
     artist: 'Mac DeMarco',
     album: 'Salad Days',
@@ -462,12 +474,21 @@ Ah, Gigi Bungsu",
 
 
 Annotation.destroy_all
-Annotation.create!({body:"This part of the song is about his internal struggle :(", start_index:250, end_index:310, user_id:user.id, track_id:knowTrack.id})
+Annotation.create!({body:"This part of the song is about his internal struggle :(", start_index:250, end_index:310, user_id:user5.id, track_id:knowTrack.id})
 Annotation.create!({body:"In a few weeks he’ll be able to decide if he wants to seize his opportunity to snatch up his girl he has in mind.", start_index:9, end_index:79, user_id:user2.id, track_id:knowTrack.id})
+Annotation.create!({body:"X is currently the attraction of the media and he feels good spreading postivity and love throughout the album", start_index:500, end_index:590, user_id:user3.id, track_id:standTrack.id})
+Annotation.create!({body:"I really feel like these lyrics get to the heart of a lot of the issues in society today.", start_index:373, end_index:420, user_id:user4.id, track_id:slimTrack.id})
+Annotation.create!({body:"MacDemarco is just tryna keep things smooth n mellow", start_index:250, end_index:310, user_id:user5.id, track_id:macTrack.id})
+Annotation.create!({body:"Gotta start out strong so that they listen till the end, dont want people giving up on your song before its even gotten going!", start_index:9, end_index:79, user_id:user3.id, track_id:blueTrack.id})
+Annotation.create!({body:"Trying to convey some palpable emotional maturity through these lines right here", start_index:420, end_index:500, user_id:user5.id, track_id:yonkers.id})
 
 
 Comment.destroy_all
 Comment.create!({body:'OMG this is the BEST song', user_id:user2.id, commentable:Track.first})
-Comment.create!({body:'I love it #ballin', user_id:user.id, commentable:Track.first})
+Comment.create!({body:'I love it #ballin', user_id:user4.id, commentable:Track.first})
+Comment.create!({body:'spicy stuff', user_id:user3.id, commentable:Track.second})
+Comment.create!({body:'Man cant believe how good this is', user_id:user4.id, commentable:Track.second})
+Comment.create!({body:'makes me wanna dance', user_id:user4.id, commentable:Track.third})
+Comment.create!({body:'Cant wait for the next drop!', user_id:user5.id, commentable:Track.fourth})
 Comment.create!({body:'FANTASTIC!!1!', user_id:user2.id, commentable:Annotation.third})
-Comment.create!({body:'This annotation is bad', user_id:user.id, commentable:Annotation.third})
+Comment.create!({body:'This annotation is bad', user_id:user3.id, commentable:Annotation.third})
