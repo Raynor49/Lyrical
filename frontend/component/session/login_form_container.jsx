@@ -4,10 +4,12 @@ import { login, clearErrors } from '../../actions/session_actions.js';
 import { openModal, closeModal} from '../../actions/modal_actions';
 import React from 'react';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownParams) => {
   return({
     errors: state.errors.session,
-    formType: 'Login'
+    formType: 'Login',
+    username: ownParams.username ? ownParams.username : null,
+    password: ownParams.password ? ownParams.password : null
   });
 };
 

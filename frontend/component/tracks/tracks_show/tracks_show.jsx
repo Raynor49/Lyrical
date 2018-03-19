@@ -16,10 +16,7 @@ class TrackShow extends React.Component{
   }
 
   componentDidMount(){
-    // this.props.requestAllTracks();
     this.props.requestTrack(this.props.id);
-    // this.props.requestAllAnnotations();
-
   }
 
   handleClick(e){

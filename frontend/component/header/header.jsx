@@ -17,6 +17,7 @@ const NotLogged = ({openModal}) => {
   return(<div className='subheader'>
     <button className='sesh-links' onClick={() => openModal('login')}>login</button>
     <button className='sesh-links' onClick={() => openModal('signup')}>signup</button>
+    <button className='sesh-links' onClick={() => openModal('demo')}>DemoLogin</button>
   </div>);
 };
 

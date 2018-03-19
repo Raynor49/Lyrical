@@ -12,9 +12,19 @@ class SessionForm extends React.Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+    if (this.props.username){
+      this.setState(
+        {username: this.props.username,
+        password: this.props.password}
+      );
+    }
+  }
+
   componentWillUnmount(){
     this.props.clearErrors();
   }
+
 
   handleSubmit(e){
     e.preventDefault();
