@@ -4,8 +4,10 @@ import {Link} from 'react-router-dom';
 const TrackIndexItem = (props) => {
   return(
     <Link to={`/tracks/${props.id}`} className='track-item'>
-      <div className='track-idx-num'>{props.idx + 1}</div>
-      <p className='track-idx-title' >{props.track.title}</p>
+      <div className='idx-title'>
+        <div className='track-idx-num'>{props.idx + 1}</div>
+        <p className='track-idx-title' >{props.track.title}</p>
+      </div>
       <div className='track-idx-artist'>{props.track.artist}</div>
     </Link>
   );

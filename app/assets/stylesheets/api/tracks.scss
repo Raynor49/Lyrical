@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .tracklist{
   margin: auto;
-  width: 80%;
+  width: 60%;
   height: 900px;
-  border-right: 1px solid grey;
-  border-left: 1px solid grey;
-  background-color: #f0ead6;
+  background-color: #f7f7f7;
+  border-top: 0.15rem solid black;
+  margin-top: 10px;
 }
 
 .tracks-index{
@@ -35,28 +35,32 @@
   color: black;
   display: flex;
   font-family: sans-serif;
-  width: 100%;
   justify-content: space-between;
   font-weight: 700;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.25 ease;
 }
 
 .track-item:hover{
   cursor: pointer;
-  background-color: #ffff64;
-  border-bottom: 2px solid grey;
+  background-color: lightgrey;
+  transition: background-color 0.60s ease;
 }
 
 .track-idx-num{
   border: 2px solid black;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 50px;
+  line-height: 50px;
   text-align: center;
+  margin-right: 10px;
 }
 
 .track-idx-artist{
   font-size: 15px;
   font-weight: 400;
+  text-align: center;
+  line-height: 50px;
 }
 
 .track-idx-title{
@@ -214,8 +218,9 @@
 
 .top-songs{
   border-bottom: 2px solid black;
-  padding-left: 45%;
   font-size: 35px;
+  font-family: sans-serif;
+  text-align: center;
   background-color: black;
   color: white;
   font-weight: 700;
@@ -257,4 +262,9 @@
 
 .github{
   color:#ffff64;
+}
+
+.idx-title{
+  display: flex;
+  line-height: 50px;
 }
