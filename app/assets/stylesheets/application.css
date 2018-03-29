@@ -35,8 +35,8 @@ time, mark, audio, video {
 }
 
 nav{
+  text-align: center;
   background-color: #ffff64;
-  text-align: right;
   color: #ffff64;
   font-family: sans-serif;
 }
@@ -61,25 +61,21 @@ nav{
 .sesh-links{
   text-shadow: none;
   position: relative;
-  bottom: 20px;
   background-color: black;
-  color: #ffff64;
-  border: 2px solid #ffff64;
-  font-size: 20px;
-  border-bottom: 10px solid transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
   font-family: sans-serif;
-  margin-top: 20px;
 }
 
 .sesh-links:hover{
-  border-bottom: 10px solid #ffff64;
   cursor: pointer;
+  color: yellow;
 }
 
 .lyrical{
   text-decoration: none;
   color: #ffff64;
-  margin-right: 45%;
   font-size: 40px;
   letter-spacing: 5px;
   text-shadow: 4px 4px black;
@@ -135,23 +131,38 @@ nav{
   font-size: 20px;
 }
 
-.subheader{
+.subheader-signedin{
   background-color: black;
   display: flex;
+  margin: auto;
   justify-content: space-between;
+}
+
+.subheader-signedout{
+  background-color: black;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.newsong-sesh-links{
+  margin-right: 100px;
+  line-height: 40px;
 }
 
 .new-song-link{
   color: white;
   text-decoration: none;
-  margin-right: 39px;
-  font-weight: 300;
+  text-align: center;
+  margin-right: 30px;
+  font-weight: normal;
   margin-top: 13px;
 }
 
 .new-song-link:hover{
   color: #ffff64;
-  font-weight: bold;
 }
 
 .cover-image{
