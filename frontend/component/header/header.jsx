@@ -8,19 +8,19 @@ const Logged = ({logout, currentUser }) => {
     <div className='subheader-signedin'>
       <h3 className='user'>{currentUser.username}</h3>
       <div className='newsong-sesh-links'>
-        <Link className='new-song-link' to='/tracks/new' >Add a Song</Link>
-        <button className='sesh-links' onClick={logout}>Logout</button>
+        <Link className='new-song-link' to='/tracks/new' >ADD SONG</Link>
+        <button className='sesh-links' onClick={logout}>LOGOUT</button>
       </div>
       <div></div>
     </div>
   );
 };
 
-const NotLogged = ({openModal}) => {
+const NotLogged = ({openModal, login}) => {
   return(<div className='subheader-signedout'>
-    <button className='sesh-links' onClick={() => openModal('login')}>Login</button>
-    <button className='sesh-links' onClick={() => openModal('signup')}>Signup</button>
-    <button className='sesh-links' onClick={() => openModal('demo')}>DemoLogin</button>
+    <button className='sesh-links' onClick={() => openModal('login')}>LOGIN</button>
+    <button className='sesh-links' onClick={() => openModal('signup')}>SIGNUP</button>
+    <button className='sesh-links' onClick={() => login({username: 'SeededUser', password: 'seededpass'})}>DEMO-LOGIN</button>
   </div>);
 };
 

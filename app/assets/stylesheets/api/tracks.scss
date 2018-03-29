@@ -10,9 +10,6 @@
   margin-top: 10px;
 }
 
-.tracks-index{
-}
-
 .track-show-page{
   display: flex;
   align-items: center;
@@ -34,12 +31,13 @@
   text-decoration: none;
   color: black;
   display: flex;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   justify-content: space-between;
-  font-weight: 700;
+  font-weight: 600;
   padding: 5px;
   border-bottom: 1px solid #ccc;
   transition: background-color 0.25 ease;
+  align-items: center;
 }
 
 .track-item:hover{
@@ -51,7 +49,6 @@
 .track-idx-num{
   border: 2px solid black;
   width: 50px;
-  line-height: 50px;
   text-align: center;
   margin-right: 10px;
 }
@@ -74,12 +71,13 @@
   font-weight: bold;
   height: 220px;
   background-color: black;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
 }
 
 .track-edit-link{
   text-decoration: none;
+  font-size: 15px;
   color: white;
 }
 
@@ -121,7 +119,7 @@
 .lyrics{
   padding-left: 25px;
   border-left: 1px solid grey;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   line-height: 25px;
   font-size: 20px;
   padding-bottom: 50px;
@@ -134,7 +132,7 @@
   border: none;
   outline: none;
   resize: none;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
   width: 60%;
 }
@@ -147,7 +145,7 @@
   padding-right: 20%;
   background-color: black;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .track-form-header{
@@ -219,15 +217,16 @@
 .top-songs{
   border-bottom: 2px solid black;
   font-size: 35px;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   background-color: black;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .edit-delete-links{
   color: white;
+  background-color: black;
 }
 
 .delete-track{
@@ -235,8 +234,8 @@
   background-color: black;
   color: white;
   height: 2px;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .delete-track:hover{
@@ -253,6 +252,9 @@
   justify-content: center;
   background-color: black;
   font-size: 20px;
+  color: green;
+  font-family: 'Source Sans Pro', sans-serif;
+
 }
 
 .linkedin{

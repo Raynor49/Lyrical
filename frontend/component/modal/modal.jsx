@@ -16,9 +16,6 @@ function Modal({modal, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
-    case 'demo':
-      component = <LoginFormContainer username='SeededUser' password='seededpass' />;
-      break;
     default:
       return null;
   }

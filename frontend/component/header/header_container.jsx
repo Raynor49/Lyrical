@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Header from './header.jsx';
-import {logout} from '../../actions/session_actions';
+import {logout, login} from '../../actions/session_actions';
 import {openModal} from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch, {history}) => {
   return({
     logout: () => dispatch(logout()),
+    login: (user) => dispatch(login(user)),
     openModal: (modal) => dispatch(openModal(modal))
   });
 };
