@@ -63,7 +63,6 @@ class SessionForm extends React.Component{
       <div className='sesh-form'>
         <div className='close-x' onClick={this.props.closeModal}>X</div>
         <h2 className='title'>{title}</h2>
-        {this.renderErrors()}
         <form onSubmit={this.handleSubmit}>
           <label>Username
             <input onChange={this.updateField('username')} type='text' value={this.state.username} />
@@ -72,6 +71,7 @@ class SessionForm extends React.Component{
             <input onChange={this.updateField('password')} type='password' value={this.state.password} />
           </label>
           <input className='session-button' type='submit' value={this.props.formType}/>
+            {this.renderErrors()}
         </form>
       </div>
     );

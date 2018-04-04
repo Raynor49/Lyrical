@@ -10,6 +10,7 @@ import CommentFormContainer from '../../comments/comments_form/comment_form_cont
 
 class TrackShow extends React.Component{
   constructor(props){
+    window.scrollTo(0,0);
     super(props);
     this.state = { startIndex: 0, endIndex: 0, text: ""};
     this.handleClick = this.handleClick.bind(this);

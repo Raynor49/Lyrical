@@ -25,12 +25,10 @@ class Lyrics extends React.Component {
     }else{
       this.props.history.push(`/tracks/${this.props.trackId}`);
     }
-
   }
 
 
   render () {
-
     return(
       <p
         className='lyric-component'
