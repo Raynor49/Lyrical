@@ -117,6 +117,11 @@
 }
 
 .comment-delete-button{
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
