@@ -3,12 +3,13 @@ class Api::TracksController < ApplicationController
 
   def create
     @track = current_user.tracks.new(track_params)
-
-    if @track.save
-      render :show
-    else
-      render json: @track.errors.full_messages, status: 422
-    end
+      if  @track.title.length < 31 && @track.artist.length < 31 && @track.album.length < 31 && @track.lyrics.length < 10000 && @track.save
+        render :show
+      elsif @track.title.length >= 31 || @track.artist.length >= 31 || @track.album.length >= 31 || @track.lyrics.length >= 10000
+        render json: ['Input too many characters.'], status: 422
+      else
+        render json: @track.errors.full_messages, status: 422
+      end
   end
 
   def index

@@ -17,7 +17,9 @@ class TrackForm extends React.Component{
   }
 
   handleSubmit(e){
-
+    if (this.state['title'].length > 30){
+      return;
+    }
     e.preventDefault();
     this.props.action(this.state).then(
       data => this.props.history.push(`/tracks/${data.track.id}`)
