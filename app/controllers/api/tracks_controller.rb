@@ -6,7 +6,7 @@ class Api::TracksController < ApplicationController
       if  @track.title.length < 31 && @track.artist.length < 31 && @track.album.length < 31 && @track.lyrics.length < 10000 && @track.save
         render :show
       elsif @track.title.length >= 31 || @track.artist.length >= 31 || @track.album.length >= 31 || @track.lyrics.length >= 10000
-        render json: ['Input too many characters.'], status: 422
+        render json: ['Input too many characters. Max 30 allowed.'], status: 422
       else
         render json: @track.errors.full_messages, status: 422
       end
