@@ -14,5 +14,12 @@ This application was made using a Ruby on Rails backend with a Javascript fronte
 
 Much of the app takes place in the track show pages, where users are able to comment on and annotate lyrics. Most of the difficulty of this app came from trying to allow users to be able to highlight text on the track show pages, write and submit an annotation, and have their highlighted text change into a link which links to that annotation they submitted. I needed to write a method which checked the beginning and ending indices of each annotation and rendered sections of the lyrics as either a plaintext 'Lyrics' component or a linking 'Highlight' component depending on those indices.
 
+## Local
+bundle install  
+yarn install  
+yarn run webpack  
+sudo service postgresql start  
+rails db:migrate  
+
 ### Todos
 I plan on implementing a 'likes' feature for users to be able to vote on annotations and comments from other users.
