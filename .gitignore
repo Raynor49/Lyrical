@@ -2,3 +2,5 @@ node_modules
 bundle.*
 .DS_Store
 .byebug_history
+
+/config/master.key
