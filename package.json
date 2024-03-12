@@ -27,8 +27,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
-    "start": "node server.js",
-    "postinstall": "webpack"
+    "start": "webpack",
+    "postinstall": ""
   },
   "engines": {
     "node": "20.9.0"
