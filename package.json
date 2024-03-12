@@ -27,9 +27,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack",
-    "start": "webpack && rails server",
+    "start": "rails server",
     "postinstall": "webpack",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress"
+    "heroku-postbuild": "webpack -p"
   },
   "engines": {
     "node": "20.9.0"
