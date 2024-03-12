@@ -27,7 +27,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch",
-    "start": "yarn run webpack",
+    "start": "",
     "postinstall": "webpack"
   },
   "engines": {
