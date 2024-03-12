@@ -26,9 +26,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "./bin/webpack-dev-server",
+    "webpack": "webpack --watch",
     "start": "rails server",
-    "postinstall": ""
+    "postinstall": "webpack"
   },
   "engines": {
     "node": "20.9.0"
