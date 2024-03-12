@@ -83,3 +83,4 @@ production:
   database: geniusApp_production
   username: geniusApp
   password: <%= ENV['GENIUSAPP_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
