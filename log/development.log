@@ -651,3 +651,52 @@ Processing by Api::TracksController#index as JSON
 Completed 200 OK in 70ms (Views: 55.1ms | ActiveRecord: 10.7ms | Allocations: 30579)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-12 00:13:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#root as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered static_pages/root.html.erb within layouts/application (Duration: 41.0ms | Allocations: 17871)
+  Rendered layout layouts/application.html.erb (Duration: 557.8ms | Allocations: 891772)
+Completed 200 OK in 570ms (Views: 550.7ms | ActiveRecord: 11.1ms | Allocations: 898096)
+
+
+Started GET "/api/tracks" for 127.0.0.1 at 2024-03-12 00:13:47 -0400
+Processing by Api::TracksController#index as JSON
+  Rendering api/tracks/index.json.jbuilder
+  [1m[36mTrack Load (1.3ms)[0m  [1m[34mSELECT "tracks".* FROM "tracks"[0m
+  [1m[36mComment Pluck (0.5ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 1], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.4ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 1]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 20.7ms | Allocations: 12841)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 1]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 1], ["commentable_type", "Track"]]
+  [1m[36mComment Pluck (0.2ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 2], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 2]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 1.2ms | Allocations: 534)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 2]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 2], ["commentable_type", "Track"]]
+  [1m[36mComment Pluck (0.2ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 3], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 3]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 1.2ms | Allocations: 530)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 3]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 3], ["commentable_type", "Track"]]
+  [1m[36mComment Pluck (0.2ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 4], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 4]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 1.3ms | Allocations: 532)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 4]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 4], ["commentable_type", "Track"]]
+  [1m[36mComment Pluck (0.2ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 5], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 5]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 1.2ms | Allocations: 529)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 5]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 5], ["commentable_type", "Track"]]
+  [1m[36mComment Pluck (0.2ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 6], ["commentable_type", "Track"]]
+  [1m[36mAnnotation Pluck (0.2ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 6]]
+  Rendered api/tracks/_track.json.jbuilder (Duration: 1.4ms | Allocations: 529)
+  [1m[36mCACHE Annotation Pluck (0.0ms)[0m  [1m[34mSELECT "annotations"."id" FROM "annotations" WHERE "annotations"."track_id" = $1[0m  [["track_id", 6]]
+  [1m[36mCACHE Comment Pluck (0.0ms)[0m  [1m[34mSELECT "comments"."id" FROM "comments" WHERE "comments"."commentable_id" = $1 AND "comments"."commentable_type" = $2[0m  [["commentable_id", 6], ["commentable_type", "Track"]]
+  Rendered api/tracks/index.json.jbuilder (Duration: 51.4ms | Allocations: 27775)
+Completed 200 OK in 56ms (Views: 38.9ms | ActiveRecord: 13.5ms | Allocations: 30578)
+
+
